@@ -1,2 +1,76 @@
-haha
-lol
+Le schéma pour l'instant:
+
+tile
+  int x
+  int y
+  type (enum bois, pierre, mur, ...)
+  foreign_key carte
+  foreign_key ou NULL monstre/coffre/objet/etc.
+  foreign_key porte_vers
+
+carte
+  id
+  varchar nom
+  joueur_initial (x,y)
+
+monstre
+  nom varchar
+  pv varchar
+  degats
+  comportement (enum hostile neutre parle, ...)
+  (armure, resistances, ...)
+
+inventaire
+  foreign_key joueur
+  objet_i: NULL ou foreign_key objet
+
+etat
+  foreign_key joueur
+  foreign_key carte
+
+
+instances
+  foreign_key joueur
+  foreign_key modele_monstre ou modele_objet
+  position
+  pv (ne s'applique à potion)
+
+objets
+  nom
+  effet "ezfzef"
+  carac JSON
+
+potion consommable
+
+{
+  equipable comme arme: true,
+  donne_vie: 20,
+  effet: (immediat ou differe),
+  utilisable: true/false
+}
+
+
+epee
+{
+  arme: true
+  degat: 10
+  effet: differe
+}
+
+potion_instantanee
+{
+  donne_vie: 20
+  effet: immediat
+}
+
+potion_inventaire
+{
+  donne_vie: 20
+  utilisable: true
+  effet: differe
+}
+
+
+
+
+(points d'action par tour, chaque action a un coût différent)
