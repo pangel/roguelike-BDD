@@ -1,0 +1,28 @@
+
+{
+  version: 0.1,
+  counter: C,
+  player: {
+    x: 23,
+    hp: 12
+  },
+  instances: [
+    {
+      id: 34903,
+      hp: 12
+    },
+    ... 
+  ],
+  add: [ 
+    {
+      type: (monster|object),
+      id_model: 1239,
+      id_instance: (player_id * 10^5) + counter
+      x: 0,
+      y: 89,
+      ...
+    },
+    ...
+  ],
+  remove: [ idA, idB, ... ]
+}
