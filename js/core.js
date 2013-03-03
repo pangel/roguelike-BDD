@@ -1,10 +1,3 @@
-// Create a new object based on this.
-//Object.prototype.beget = function() {
-  //var F = function() {};
-  //F.prototype = this;
-  //return (new F());
-//};
-
 // Modify 'Constructor' so its prototype is a copy of 'template' and
 // that copy of 'template' has the prototype of Parent as its prototype.
 // Final result:
@@ -24,10 +17,9 @@
 //             |
 //       Parent.prototype
 Object.build = function(Constructor,template,Parent) {
-
-  var F = function() {};
-  F.prototype = Parent.prototype;
-  var child = new F();
+  var Model = function() {};
+  Model.prototype = Parent.prototype;
+  var child = new Model();
 
   for (var prop in template) {
     child[prop] = template[prop];

@@ -1,5 +1,6 @@
 window.App = {};
-
+App.models = {};
+App.instances = [];
 
 App.step = function() {
   _.each(this.instances, function(instance) {
@@ -8,29 +9,26 @@ App.step = function() {
   });
 };
 
-App.initializeInstances = function(instances) {
+App.buildModel = function(name) {
 
-  App.instances = [];
-  // Create model prototypes (for objects and monsters)
-  _.each(App.models, function(model,id) {
-    if (!App.types[model.type]) { throw "Unknown type: "+model.type; }
+  // Cache for already-built models
+  if (App.models[name]) { return App.models[name]; }
 
-    var Constructor = model.initalizer || (function() { this.super(); });
-    Object.build(Constructor, model, App.types[model.type])
+  var template = App.modelTemplates[name];
 
-    App.models[id] = Constructor;
-  });
+  // The constructor of the parent will be bound to super(). If there is no parent,
+  // super will be the empty function.
+  var ParentConstructor = template.parent ? this.buildModel(template.parent) : function() {};
 
-  // Create saved instances
-  _.each(instances, function(instance) {
-    if (!App.models[instance.model_id]) { throw "Unknown model id: "+instance.model_id; }
+  // The constructor can be specified in the template. Otherwise, it will just call super().
+  var Constructor = template.initialize || function() { this.super(); };
 
-    var instance = new App.models[instance.model_id]();
-    for (var prop in instance.attributes) {
-      instance[prop] = instance.attributes[prop]
-    }
-    App.instances.push(instance);
+  Object.build(Constructor, template, ParentConstructor);
 
-  });
+  // Automatically set the css class unless the template has already done that.
+  if (!Constructor.prototype.hasOwnProperty("cssClass")) {
+    Constructor.prototype.cssClass = (Constructor.prototype.cssClass || []).concat([name]);
+  }
+
+  return App.models[name] = Constructor;
 };
-

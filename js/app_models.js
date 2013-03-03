@@ -1,7 +1,6 @@
-App.models = {
-  12: {
-    type: "Creature",
-    name: "spider",
+App.modelTemplates = {
+  "spider": {
+    parent: "creature",
     walk: function() {
       var mv = Math.random();
       var v = mv < 0.3 ? 0 : (mv < 0.6 ? 1 : -1);
@@ -16,7 +15,33 @@ App.models = {
       this.walk();
     }
 
+  },
+
+  "creature": {
+    initialize: function() {
+      this.x = 0;
+      this.y = 0;
+
+      this.$el = $("<div></div>");
+      this.cssClass = this.cssClass.concat([this.name]);
+      this.$el.addClass(this.cssClass.join(' '));
+      $('body').append(this.$el);
+    },
+    cssClass: ["creature"],
+    move: function(x,y) {
+      this.x = Math.max(Math.min(this.x+x,App.map.width-1), 0);
+      this.y = Math.max(Math.min(this.y+y,App.map.height-1), 0);
+    },
+
+    step: function() {
+    },
+
+    draw: function() {
+      App.map.positionElement(this.$el,this.x,this.y);
+    }
+  },
+
+  "player": {
+    parent: "creature"
   }
 };
-
-

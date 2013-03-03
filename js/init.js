@@ -15,14 +15,24 @@ $(function() {
     ['w', 'w', 'w', 'w', 'w', 'w', 'w','w', 'w', 'w','w']
   ];
 
-  var instances = [
-    { model_id: 12, attributes: { x: 3, y: 6 }}
-  ];
+  var instances = [{ model_id: "spider", attributes: { x: 3, y: 6 }}];
 
-  App.player = new App.types.Player();
   App.control.initialize();
   App.map.initialize(map);
-  App.initializeInstances(instances);
+
+  for (var name in App.modelTemplates) {
+    App.buildModel(name);
+  }
+
+  _.each(instances, function(instance) {
+    var obj = new App.models[instance.model_id]();
+    for (var prop in instance.attributes) {
+      obj[prop] = instance.attributes[prop];
+    }
+    App.instances.push(obj);
+  });
+
+  App.player = new App.models.player();
   App.instances.push(App.player);
 });
 
