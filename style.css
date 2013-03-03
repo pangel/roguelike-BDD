@@ -1,0 +1,79 @@
+
+/* Le CSS modifie l'apparence des éléments HTML. */
+/* p { STYLE } == appliquer STYLE à tous les élément <p>...</p> */
+/* .ha { STYLE } == appliquer STYLE à tous les éléments <[elem] class="ha">... */
+/* #hi { STYLE } == appliquer STYLE à tous les éléments <[elem] id="hi">... */
+/* .w pour Wall,
+   .o pour Open */
+.w, .o {
+  /* Par défaut un élément a une position static
+     et s'insère dans le flux du document (verticalement
+     ou horizontalement).
+     Une position absolute sort l'élément du flux (les autres
+     éléments font comme s'il n'existait pas) et il doit être
+     positionné en coordonnées absolues grâce aux propriétés
+     top et left (qui sont modifiées plus tard). [1]
+  */
+  position: absolute;
+  width: 50px;
+  height: 85px;
+  /* Les images des tiles font 100px par 170px
+     background-size les remet à la bonne échelle
+  */
+  background-size: 100%;
+}
+
+.w {
+  background-image: url('images/Wall%20Block.png');
+  /* Comme les images ont une zone transparente en haut,
+     background-position permet de les décaler
+  */
+  background-position: 0px -24px;
+}
+
+.o {
+  background-image: url('images/Stone%20Block.png');
+  background-position: 0px -24px;
+}
+
+.creature {
+  position: absolute;
+  /* Arrondi des angles. Avec un arrondi assez grand
+     on peut dessiner un cercle.
+  */
+  border-radius: 14px;
+  width: 20px;
+  height: 20px;
+  /* Le a dans RGBa est pour alpha, la transparence entre 0 et 1 */
+  background: rgba(0,0,230,0.6);
+  top: 13px;
+  left: 13px;
+  /* Le z-index est la position en profondeur (coordonnée z) [2] */
+  z-index: 1;
+}
+
+.player {
+}
+
+.spider {
+  background: rgba(230,0,0,0.6);
+}
+
+.debug .w, .debug .o {
+  width: 39px;
+  height: 39px;
+  border: 1px solid rgba(255, 255, 0, 0.4);
+}
+
+/* [1] Les coordonnées sont relatives au noeud ancêtres positionné le plus proche.
+   Un noeud est positionné quand il a position: relative, absolute ou fixed. */
+
+/* [2] Il y a plusieurs contextes de z-index; un pour les éléments avec
+   position:static, un pour les éléments avec position:absolute, etc.
+   C'est un peu plus compliqué parce qu'il est possible de créer des nouveaux
+   contextes mais je ne suis pas expert. On risque de devoir bien connaître pour faire
+   le jeu alors :
+   http://www.w3.org/TR/CSS21/zindex.html
+   https://developer.mozilla.org/en-US/docs/CSS/Understanding_z-index/The_stacking_context
+   http://philipwalton.com/articles/what-no-one-told-you-about-z-index/
+*/
