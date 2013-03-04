@@ -23,11 +23,9 @@ App.modelTemplates = {
       this.y = 0;
 
       this.$el = $("<div></div>");
-      this.cssClass = this.cssClass.concat([this.name]);
-      this.$el.addClass(this.cssClass.join(' '));
+      this.$el.addClass(this.chain.join(' '));
       $('body').append(this.$el);
     },
-    cssClass: ["creature"],
     move: function(x,y) {
       this.x = Math.max(Math.min(this.x+x,App.map.width-1), 0);
       this.y = Math.max(Math.min(this.y+y,App.map.height-1), 0);

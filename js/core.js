@@ -1,5 +1,6 @@
-// Modify 'Constructor' so its prototype is a copy of 'template' and
-// that copy of 'template' has the prototype of Parent as its prototype.
+// Set Constructor to produce instances of Parent
+// Merge template into Constructor's prototype.
+// Add super method to Constructor's prototype.
 // Final result:
 //
 //      new Constructor() --> object
@@ -17,17 +18,14 @@
 //             |
 //       Parent.prototype
 Object.build = function(Constructor,template,Parent) {
-  var Model = function() {};
-  Model.prototype = Parent.prototype;
-  var child = new Model();
+  Constructor.prototype = Object.create(Parent.prototype);
 
   for (var prop in template) {
-    child[prop] = template[prop];
+    Constructor.prototype[prop] = template[prop];
   }
 
-  child.super = function() {
+  Constructor.prototype.super = function() {
     Parent.apply(this,arguments)
   }
 
-  Constructor.prototype = child;
 }
