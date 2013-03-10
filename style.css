@@ -29,11 +29,13 @@
      background-position permet de les décaler
   */
   background-position: 0px -24px;
+  background-repeat: no-repeat;
 }
 
 .o {
   background-image: url('images/Stone%20Block.png');
   background-position: 0px -24px;
+  background-repeat: no-repeat;
 }
 
 .creature {
@@ -41,22 +43,28 @@
   /* Arrondi des angles. Avec un arrondi assez grand
      on peut dessiner un cercle.
   */
-  border-radius: 14px;
-  width: 20px;
-  height: 20px;
-  /* Le a dans RGBa est pour alpha, la transparence entre 0 et 1 */
-  background: rgba(0,0,230,0.6);
-  top: 13px;
-  left: 13px;
   /* Le z-index est la position en profondeur (coordonnée z) [2] */
   z-index: 1;
+  background-repeat: no-repeat;
 }
 
 .player {
+  width: 47px;
+  height: 37px;
+  top: 0px;
+  left: 0px;
+  /* Le a dans RGBa est pour alpha, la transparence entre 0 et 1 */
+  background-image: url('images/m.png');
+  background-size: 100%;
 }
 
 .spider {
-  background: rgba(230,0,0,0.6);
+  width: 47px;
+  height: 37px;
+  top: 0px;
+  left: 0px;
+  background-image: url('images/s.png');
+  background-size: 100%;
 }
 
 .debug .w, .debug .o {
