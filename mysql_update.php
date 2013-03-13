@@ -8,7 +8,7 @@
 	
 
 
-	$nb = o;
+	$nb = 0;
 	function comma()
 	{
 		$nb = $nb--;
