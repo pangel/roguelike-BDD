@@ -2,20 +2,22 @@
 // a été créé. Cela évite d'avoir du code qui demande l'élément X alors que X n'a
 // pas encore été créé.
 $(function() {
-  var map = [
-    ['w', 'w', 'w', 'w', 'w', 'w', 'w','w', 'w', 'w','w'],
-    ['w', 'o', 'o', 'o','o', 'o', 'o','o', 'o', 'o', 'w'],
-    ['w', 'o', 'o', 'o','o', 'o', 'o','o', 'o', 'o', 'w'],
-    ['w', 'o', 'o', 'o','o', 'o', 'o','o', 'o', 'o', 'w'],
-    ['w', 'o', 'o', 'o','o', 'o', 'o','o', 'o', 'o', 'w'],
-    ['w', 'o', 'o', 'o','o', 'o', 'o','o', 'o', 'o', 'w'],
-    ['w', 'o', 'o', 'o','o', 'o', 'o','o', 'o', 'o', 'w'],
-    ['w', 'o', 'o', 'o','o', 'o', 'o','o', 'o', 'o', 'w'],
-    ['w', 'o', 'o', 'o','o', 'o', 'o','o', 'o', 'o', 'w'],
-    ['w', 'w', 'w', 'w', 'w', 'w', 'w','w', 'w', 'w','w']
-  ];
+/*  var map = [
+    ['e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e'],
+    ['e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e'],
+    ['e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e'],
+    ['e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e'],
+    ['e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e'],
+    ['e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e'],
+    ['e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e'],
+    ['e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e'],
+    ['e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e'],
+    ['e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e']
+  ];*/
 
-  var instances = [{ model_id: "spider", attributes: { x: 3, y: 6 }}];
+    var map = App.map.map;
+
+  var instances = [];
 
   App.control.initialize();
   App.map.initialize(map);
@@ -35,4 +37,3 @@ $(function() {
   App.player = new App.models.player();
   App.instances.push(App.player);
 });
-

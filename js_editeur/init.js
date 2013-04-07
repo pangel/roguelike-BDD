@@ -2,7 +2,7 @@
 // a été créé. Cela évite d'avoir du code qui demande l'élément X alors que X n'a
 // pas encore été créé.
 $(function() {
-  var map = [
+/*  var map = [
     ['e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e'],
     ['e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e'],
     ['e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e'],
@@ -13,12 +13,14 @@ $(function() {
     ['e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e'],
     ['e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e'],
     ['e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e']
-  ];
+  ];*/
+
+    var map = App.map.map;
 
   var instances = [];
 
+  App.map.initialize(map); 
   App.control.initialize();
-  App.map.initialize(map);
 
   for (var name in App.modelTemplates) {
     App.buildModel(name);
@@ -35,4 +37,3 @@ $(function() {
   App.player = new App.models.player();
   App.instances.push(App.player);
 });
-

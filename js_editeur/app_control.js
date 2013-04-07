@@ -2,6 +2,15 @@ App.currentTile = 'o';
 
 App.control = {
 
+    changeTile: function(x,y){
+	console.log("bogo");
+	var t = $('<div class="'+'t '+App.currentTile+'" id='+x+"_"+y+'></div>');
+	t.css({top: y*App.map.tileShiftY, left: x*App.map.tileShiftX});
+	$("#"+x+"_"+y).replaceWith(t);
+	console.log("#"+x+"_"+y);
+    },
+
+
   keymap: {
     left:  function() {  App.player.move(-1,0); App.step();},
     right: function() {  App.player.move(1,0); App.step();},
@@ -10,9 +19,7 @@ App.control = {
     enter: function() {
 	var x = App.player.x;
 	var y = App.player.y;
-	var t = $('<div class="'+'t '+x+"_"+y+" "+App.currentTile+'" ></div>');
-	t.css({top: y*App.map.tileShiftY, left: x*App.map.tileShiftX});
-	$('div.'+x+"_"+y).replaceWith(t);
+	App.control.changeTile(x,y);
     },
       w: function() {App.currentTile = 'w'},
       o: function() {App.currentTile = 'o'}
@@ -37,6 +44,45 @@ App.control = {
     // $(document) : sélectionne la racine du document HTML.
     // $(E).on(EVENT, FN). Exécute FN quand l'élément E reçoit l'événement EVENT.
     // FN prend généralement EVENT en argument.
+
+      $(document).ready(function(){
+	  $('body').on('click',"div.t",function(){
+	      var tab = $(this).attr('id').match('([0-9]+)_([0-9]+)');
+	      if(!tab[2]){alert("Error number 789");};
+	      App.control.changeTile(tab[1],tab[2]);
+	  });
+      });
+
+
+    //Ajout de colonne et de ligne à la map
+    $(document).ready(function(){
+	$('body').on('click','#apply',function(){
+	    var addrow = $('#addrow').val().match('([0-9]+)');
+	    var addcolumn = $('#addcolumn').val().match('([0-9]+)');
+	    var ln = App.map.map.length;
+	    for (var i = ln; i < ln + parseInt(addrow); i++){
+		App.map.map[i] = new Array();
+		for (var j = 0; j < App.map.map[0].length; j++){
+		    App.map.map[i][j] = 'e';
+		    var t = $('<div class="t e" id='+j+"_"+i+'></div>');
+		    t.css({top: i*App.map.tileShiftY, left: j*App.map.tileShiftX});
+		    $('body').append(t);
+		};
+	    };
+	    var ln2 = App.map.map[0].length;
+	    for (var j = ln2; j < ln2 + parseInt(addcolumn); j++){
+		for (var i = 0; i < App.map.map.length; i++){
+		    App.map.map[i][j] = 'e';
+		    var t = $('<div class="t e" id='+j+"_"+i+'></div>');
+		    t.css({top: i*App.map.tileShiftY, left: j*App.map.tileShiftX});
+		    $('body').append(t);
+		};
+	    };
+	});
+    });
+
+
+
     $(document).on('keyup', function(event) {
       if (!event.shiftKey && !event.ctrlKey && App.control.keymap[keycodes[event.which]]) {
 
@@ -49,4 +95,3 @@ App.control = {
     });
   }
 }
-

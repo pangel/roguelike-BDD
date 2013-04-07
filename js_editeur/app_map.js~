@@ -1,6 +1,18 @@
 App.map = {
   tileShiftX: 50,
-  tileShiftY: 40
+    tileShiftY: 40,
+    map: [
+    ['e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e'],
+    ['e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e'],
+    ['e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e'],
+    ['e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e'],
+    ['e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e'],
+    ['e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e'],
+    ['e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e'],
+    ['e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e'],
+    ['e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e'],
+    ['e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e']
+  ]
 };
 
 App.map.positionElement = function($el, x, y) {
@@ -18,12 +30,30 @@ App.map.initialize = function(map) {
 
   var self = this;
 
+/*    //Ajout de colonne et de ligne à la map
+    $(document).ready(function(){
+	$('body').on('click','#apply',function(){
+	    var addrow = $('#addrow').val().match('([0-9]+)');
+	    var addcolumn = $('#addcolumn').val().match('([0-9]+)');
+	    for (var i = App.map.map.length; i < App.map.map.length + addrow; i++){
+		for (var j = 0; j < App.map.map[0].length; j++){
+		    App.map.map[i][j] = e;
+		    var t = $('<div class="t e" id='+i+"_"+j+'></div>');
+		    t.css({top: j*self.tileShiftY, left: i*self.tileShiftX});
+		    $('body').append(t);
+		    alert("" + i +""+ j);
+		};
+	    };
+	    alert("");
+	});
+    });*/
+    
   // Build the map
   _.each(map, function(line, y) {
     _.each(line, function(tile, x) {
       // $(H) où H représente un morceau de HTML renvoie un morceau
       // d'arbre représentant ce HTML.
-      var t = $('<div class="'+tile+'" ></div>');
+	var t = $('<div class="t '+tile+'" id='+x+"_"+y+'></div>');
       // On applique les proprietés top et left à la tile
       t.css({top: y*self.tileShiftY, left: x*self.tileShiftX});
 

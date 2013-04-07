@@ -1,6 +1,18 @@
 App.map = {
   tileShiftX: 50,
-  tileShiftY: 40
+    tileShiftY: 40,
+    map: [
+    ['e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e'],
+    ['e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e'],
+    ['e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e'],
+    ['e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e'],
+    ['e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e'],
+    ['e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e'],
+    ['e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e'],
+    ['e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e'],
+    ['e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e'],
+    ['e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e']
+  ]
 };
 
 App.map.positionElement = function($el, x, y) {
@@ -18,12 +30,13 @@ App.map.initialize = function(map) {
 
   var self = this;
 
+    
   // Build the map
   _.each(map, function(line, y) {
     _.each(line, function(tile, x) {
       // $(H) où H représente un morceau de HTML renvoie un morceau
       // d'arbre représentant ce HTML.
-      var t = $('<div class="'+'t '+x+"_"+y+" "+tile+'" ></div>');
+	var t = $('<div class="t '+tile+'" id='+x+"_"+y+'></div>');
       // On applique les proprietés top et left à la tile
       t.css({top: y*self.tileShiftY, left: x*self.tileShiftX});
 
