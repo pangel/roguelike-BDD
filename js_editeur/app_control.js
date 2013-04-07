@@ -1,4 +1,5 @@
 App.currentTile = 'o';
+App.tiles = ['o','w'];
 
 App.control = {
 
@@ -46,7 +47,7 @@ App.control = {
     // FN prend généralement EVENT en argument.
 
       $(document).ready(function(){
-	  $('body').on('click',"div.t",function(){
+	  $('#map').on('click',"div.t",function(){
 	      var tab = $(this).attr('id').match('([0-9]+)_([0-9]+)');
 	      if(!tab[2]){alert("Error number 789");};
 	      App.control.changeTile(tab[1],tab[2]);
@@ -66,7 +67,7 @@ App.control = {
 		    App.map.map[i][j] = 'e';
 		    var t = $('<div class="t e" id='+j+"_"+i+'></div>');
 		    t.css({top: i*App.map.tileShiftY, left: j*App.map.tileShiftX});
-		    $('body').append(t);
+		    $('#map').append(t);
 		};
 	    };
 	    var ln2 = App.map.map[0].length;
@@ -75,7 +76,7 @@ App.control = {
 		    App.map.map[i][j] = 'e';
 		    var t = $('<div class="t e" id='+j+"_"+i+'></div>');
 		    t.css({top: i*App.map.tileShiftY, left: j*App.map.tileShiftX});
-		    $('body').append(t);
+		    $('#map').append(t);
 		};
 	    };
 	});

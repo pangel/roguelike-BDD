@@ -41,7 +41,7 @@ App.map.initialize = function(map) {
       t.css({top: y*self.tileShiftY, left: x*self.tileShiftX});
 
       // append ajoute un élément en dernier fils d'un noeud.
-      $('body').append(t);
+      $('#map').append(t);
     });
   });
 };
