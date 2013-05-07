@@ -15,10 +15,14 @@ body {
     height:100%;
 }
 
-#addrowcolumn {
+#rightpanel {
     border: 2px solid black;
     float: right;
     width:19%;
+}
+
+#addrowcolumn {
+    border: 2px solid black;
 }
 
 #map {
@@ -45,6 +49,12 @@ body {
   /* Les images des tiles font 100px par 170px
      background-size les remet à la bonne échelle
   */
+  background-size: 100%;
+}
+
+.tt {
+  width: 50px;
+  height: 85px;
   background-size: 100%;
 }
 

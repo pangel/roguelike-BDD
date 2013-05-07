@@ -1,5 +1,8 @@
 App.currentTile = 'o';
-App.tiles = ['o','w'];
+App.tiles = [
+    {id: 'o', name: 'floor'},
+    {id: 'w', name: 'wall'}
+];
 
 App.control = {
 
@@ -43,6 +46,8 @@ App.control = {
 	    79: 'o'
 	};
 
+
+	//Ajout de rectangle de tiles à la souris
 	$(document).ready(function(){
 	    $('#map').on('mousedown',"div.t",function(){
 		var tab = $(this).attr('id').match('([0-9]+)_([0-9]+)');
@@ -77,6 +82,14 @@ App.control = {
 	    });
 	});
 
+
+	//Selection de la tile
+	$(document).ready(function(){
+	    $('#rightpanel').on('click',"div.tt",function(){
+		var tab = $(this).attr('id');
+		App.currentTile = tab;
+	    });
+	});
 
 	//Ajout de colonne et de ligne à la map
 	$(document).ready(function(){

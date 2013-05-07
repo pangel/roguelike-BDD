@@ -10,6 +10,10 @@ $(function() {
   var instances = [];
 
   App.map.initialize(map); 
+    _.each(App.tiles, function(tile){
+	var t = $('<div class="tt '+tile.id+'" id="'+tile.id+'"></div>');
+	$('#tiles').append(t);
+    });
   App.control.initialize();
 
 
