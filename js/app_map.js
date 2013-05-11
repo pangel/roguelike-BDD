@@ -1,15 +1,23 @@
-App.map = {
-  tileShiftX: 50,
-  tileShiftY: 40
+App.map = {};
+
+// Not used yet, but machinery is ready to accomodate
+// per-sprite sophisticated background/position shifting.
+App.sprites = {
+  //w: { backgroundPositionY: 0, tdiff: -40 }
 };
+
 
 App.map.draw = function() {}
 
 App.map.positionElement = function($el, x, y) {
+  var defaults = { top: 40, left: 50, tdiff: 0, ldiff: 0 };
+  var vals = _.extend({},defaults,App.sprites[$el.attr('sprite-type')]);
+
   $el.css({
-    top: (y*this.tileShiftY)+"px",
-    left: (x*this.tileShiftX)+"px"
+    top: (y*vals.top)+vals.tdiff+"px",
+    left: (x*vals.left)-vals.ldiff+"px",
   });
+
 };
 
 App.map.disappearElement = function($el) {
@@ -46,6 +54,7 @@ App.map.initialize = function(map) {
   }
 
   var self = this;
+  var defaults = { top: 40, left: 50, tdiff: 0, ldiff: 0 };
 
   // Build the map
   _.each(map, function(line, y) {
@@ -53,14 +62,21 @@ App.map.initialize = function(map) {
       // $(H) où H représente un morceau de HTML renvoie un morceau
       // d'arbre représentant ce HTML.
       var t = $('<div class="'+tile+'" ></div>');
+
       // On applique les proprietés top et left à la tile
-      t.css({top: y*self.tileShiftY, left: x*self.tileShiftX});
+      var vals = _.extend({},defaults,App.sprites[tile]);
+
+      t.css({
+        top: y*vals.top + vals.tdiff,
+        left: x*vals.left + vals.ldiff,
+        backgroundPositionY: vals.backgroundPositionY
+      });
 
       // append ajoute un élément en dernier fils d'un noeud.
       $('#map').append(t);
     });
   });
 
-  $("#map").height(map.length*this.tileShiftY);
+  $("#map").height(map.length*defaults.top);
 };
 

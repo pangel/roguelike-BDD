@@ -8,24 +8,16 @@ App.setStatus = function(str) {
 };
 
 App.drawStatus = function() {
-  $c = $("#status").children();
-  $c.addClass('old');
-  var s = $c.size();
-  var l =this.status.length;
-  if (l + s > 8) {
-    $c = $c.slice(0,Math.max(0,8-l));
+  var $s = $("#status");
+  $s.children().last().addClass('bottom');
+  while(this.status.length > 0) {
+    $s.append('<div>'+this.status.shift()+'</div>');
   }
-
-  $c.last().css('margin-bottom','10px');
-
-  $("#status").html($c);
-  _.each(this.status, function(str) {
-    $("#status").append('<div>'+str+'</div>');
-  });
-
-  App.status = [];
+  $s.scrollTop($s[0].scrollHeight)
 }
 
+// Don't splice App.instances because we are probably
+// in the middle of a loop on it.
 App.removeInstance = function(el) {
   var index = App.instances.indexOf(el);
   if (index > -1) {

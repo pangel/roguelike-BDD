@@ -28,7 +28,7 @@
   /* Comme les images ont une zone transparente en haut,
      background-position permet de les décaler
   */
-  background-position: 0px -24px;
+  background-position: 0px -22px;
   background-repeat: no-repeat;
 }
 
@@ -85,14 +85,20 @@
 #status {
   width: 80%;
   margin: 50px auto;
-  border: 1px solid black;
+  /*border: 1px solid black;*/
   text-align: center;
   font-size: 0.84em;
   line-height: 1.2;
+  overflow: auto;
+  max-height: 250px;
 }
 
 #status .old {
   color: grey;
+}
+
+#status .bottom {
+  margin-bottom: 1em;
 }
 
 /* [1] Les coordonnées sont relatives au noeud ancêtres positionné le plus proche.

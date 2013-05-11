@@ -119,7 +119,7 @@ App.modelTemplates = {
   "player": {
     parent: "creature",
     team: 2,
-    dmg: 0,
+    dmg: 10,
     initialize: function() {
       this.super();
       this.name = "Joueur";
