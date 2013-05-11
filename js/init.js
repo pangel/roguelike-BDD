@@ -34,8 +34,9 @@ $(function() {
 
   App.player = new App.models.player();
   App.instances.push(App.player);
+
+  App.map.draw();
   _.each(App.instances, function(instance) {
-    instance.registerPosition();
     instance.draw();
   });
 });

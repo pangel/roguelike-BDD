@@ -2,11 +2,36 @@ window.App = {};
 App.models = {};
 App.instances = [];
 
+App.setStatus = function(str) {
+  $("#status").append('<div>'+str+'</div>');
+  var $statuses = $("#status").children();
+  if ($statuses.size() > 5) {
+    $statuses.first().remove();
+  }
+};
+
+App.resetStatus = function() {
+  $("#status").children().addClass('old');
+}
+
+App.removeInstance = function(el) {
+  var index = App.instances.indexOf(el);
+  if (index > -1) {
+    App.instances[index] = null;
+  }
+};
+
 App.step = function() {
+  this.resetStatus('');
+  App.map.draw();
   _.each(this.instances, function(instance) {
-    instance.step();
-    instance.draw();
+      if (instance) {
+        instance.step();
+        instance.draw();
+      }
   });
+
+  App.instances = _.compact(App.instances);
 };
 
 // Once a model was built and put into App.models, call new App.models.model_name() to create an instance an initialize it.

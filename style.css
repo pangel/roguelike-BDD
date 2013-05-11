@@ -73,6 +73,28 @@
   border: 1px solid rgba(255, 255, 0, 0.4);
 }
 
+#map {
+  position: relative;
+}
+
+#elements {
+  position: absolute;
+  top: 10px;
+}
+
+#status {
+  width: 80%;
+  margin: 50px auto;
+  border: 1px solid black;
+  text-align: center;
+  line-height: 1.5;
+  font-size: 1.2em;
+}
+
+#status .old {
+  color: grey;
+}
+
 /* [1] Les coordonnées sont relatives au noeud ancêtres positionné le plus proche.
    Un noeud est positionné quand il a position: relative, absolute ou fixed. */
 

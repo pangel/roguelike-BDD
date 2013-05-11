@@ -18,6 +18,12 @@
 //             |
 //       Parent.prototype
 Object.build = function(Constructor,template,Parent) {
+
+  /* ~Equivalent to:
+  * function F() {}
+  * F.prototype = Parent.prototype;
+  * Constructor.prototype = new F();
+  */
   Constructor.prototype = Object.create(Parent.prototype);
 
   for (var prop in template) {

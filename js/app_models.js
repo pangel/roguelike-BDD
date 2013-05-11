@@ -12,7 +12,12 @@ App.modelTemplates = {
     },
 
     step: function() {
-      this.walk();
+      var enemy;
+      if (enemy = this.touchingEnemies()[0]) {
+        this.attack(enemy);
+      } else {
+        this.walk();
+      }
     }
 
   },
@@ -22,45 +27,66 @@ App.modelTemplates = {
     initialize: function() {
       this.x = 0;
       this.y = 0;
-
       this.$el = $("<div></div>");
       this.$el.addClass(this.chain.join(' '));
-      $('body').append(this.$el);
+      $('#elements').append(this.$el);
     },
+    hp: 30,
+    dmg: 5,
     move: function(x,y) {
-      var oldX = this.x, oldY = this.y,
-          newX = oldX+x, newY = oldY+y;
+      var newX = this.x+x, newY = this.y+y;
       if (this.canMove(newX,newY)) {
         this.x = newX;
         this.y = newY;
-        this.updatePosition(oldX, oldY);
       }
+    },
+
+    attack: function(enemy) {
+      enemy.hurt(this.dmg);
+      App.setStatus("Attacking enemy!");
+    },
+
+    hurt: function(dmg) {
+      this.hp = Math.max(0, this.hp-dmg);
+      if (this.hp == 0) { this.die(); }
+    },
+
+    die: function() {
+      App.setStatus("is dead!");
+      this.dead = true;
     },
 
     step: function() {
     },
 
     draw: function() {
-      App.map.positionElement(this.$el,this.x,this.y);
+      if (this.dead) {
+        App.map.disappearElement(this.$el);
+        App.removeInstance(this);
+      } else {
+        App.map.positionElement(this.$el,this.x,this.y);
+      }
     }
+  },
+
+  "object": {
+    team: -1 // Bitwise 11...11 so neutral with & operation
   },
 
   // FIXME: Les changements sur références objets imbriqués ne sont pas suivis.
   // FIXME: track changes on 'set'?
   // FIXME: how to allow nested changes?
   "element": {
-    walkable: false,
     initialize: function() {
       this.attributes = {};
     },
+    team: 1,
+    walkable: false,
+    touchingEnemies: function() {
+      return _.filter(App.map.getTouching(this.x,this.y), function(el) { return this.team & el.team != this.team }, this)
+    },
     canMove: function(x,y) {
       return App.map.isWalkable(x,y);
-    },
-    registerPosition: function() {
-      App.map.setElementPosition(this);
-    },
-    updatePosition: function(oldX,oldY) {
-      App.map.updateElementPosition(this,oldX,oldY);
     },
     isWalkable: function() {
       return !!this.walkable;
@@ -90,6 +116,8 @@ App.modelTemplates = {
 
   "player": {
     parent: "creature",
+    team: 2,
+    dmg: 10,
     initialize: function() {
       this.super();
       this.x = this.start[0];
