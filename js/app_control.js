@@ -1,10 +1,10 @@
 App.control = {
 
   keymap: {
-    left:  function() {  App.player.act(-1,0); App.step();},
-    right: function() {  App.player.act(1,0); App.step();},
-    up:    function() {  App.player.act(0,-1); App.step();},
-    down:  function() {  App.player.act(0,1); App.step();}
+    left:  _.throttle(function() { App.player.act(-1,0); App.step();}, 100),
+    right: _.throttle(function() { App.player.act(1,0); App.step();}, 100),
+    up:    _.throttle(function() { App.player.act(0,-1); App.step();}, 100),
+    down:  _.throttle(function() { App.player.act(0,1); App.step();}, 100)
   },
 
   initialize: function() {
@@ -23,7 +23,7 @@ App.control = {
     // $(document) : sélectionne la racine du document HTML.
     // $(E).on(EVENT, FN). Exécute FN quand l'élément E reçoit l'événement EVENT.
     // FN prend généralement EVENT en argument.
-    $(document).on('keyup', function(event) {
+    $(document).on('keydown', function(event) {
       if (!event.shiftKey && !event.ctrlKey && App.control.keymap[keycodes[event.which]]) {
 
         // En javascript les événements sont déclenchés sur un noeud de l'arbre
