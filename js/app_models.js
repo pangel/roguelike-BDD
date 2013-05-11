@@ -18,6 +18,7 @@ App.modelTemplates = {
   },
 
   "creature": {
+    parent: "element",
     initialize: function() {
       this.x = 0;
       this.y = 0;
@@ -27,8 +28,13 @@ App.modelTemplates = {
       $('body').append(this.$el);
     },
     move: function(x,y) {
-      this.x = Math.max(Math.min(this.x+x,App.map.width-1), 0);
-      this.y = Math.max(Math.min(this.y+y,App.map.height-1), 0);
+      var oldX = this.x, oldY = this.y,
+          newX = oldX+x, newY = oldY+y;
+      if (this.canMove(newX,newY)) {
+        this.x = newX;
+        this.y = newY;
+        this.updatePosition(oldX, oldY);
+      }
     },
 
     step: function() {
@@ -39,7 +45,56 @@ App.modelTemplates = {
     }
   },
 
+  // FIXME: Les changements sur références objets imbriqués ne sont pas suivis.
+  // FIXME: track changes on 'set'?
+  // FIXME: how to allow nested changes?
+  "element": {
+    walkable: false,
+    initialize: function() {
+      this.attributes = {};
+    },
+    canMove: function(x,y) {
+      return App.map.isWalkable(x,y);
+    },
+    registerPosition: function() {
+      App.map.setElementPosition(this);
+    },
+    updatePosition: function(oldX,oldY) {
+      App.map.updateElementPosition(this,oldX,oldY);
+    },
+    isWalkable: function() {
+      return !!this.walkable;
+    },
+    set: function(key,value) {
+      this.attributes[key] = value;
+    },
+    get: function(key) {
+      return this.attributes[key];
+    },
+    diff: function() {
+      var self = this;
+      var diff = {};
+      _.each(self.attributes, function(value,key) {
+        if (value != self.oldAttributes[key]) {
+          diff[key] = value;
+        }
+      });
+    },
+    saved: function() {
+      this.oldAttributes = this.attributes;
+    },
+    props: function() {
+      isWalkable: false;
+    }
+  },
+
   "player": {
-    parent: "creature"
+    parent: "creature",
+    initialize: function() {
+      this.super();
+      this.x = this.start[0];
+      this.y = this.start[1];
+    },
+    start: [3,3]
   }
 };

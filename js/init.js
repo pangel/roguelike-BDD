@@ -4,9 +4,9 @@
 $(function() {
   var map = [
     ['w', 'w', 'w', 'w', 'w', 'w', 'w','w', 'w', 'w','w'],
-    ['w', 'o', 'o', 'o','o', 'o', 'o','o', 'o', 'o', 'w'],
-    ['w', 'o', 'o', 'o','o', 'o', 'o','o', 'o', 'o', 'w'],
-    ['w', 'o', 'o', 'o','o', 'o', 'o','o', 'o', 'o', 'w'],
+    ['w', 'o', 'o', 'o','o', 'o', 'o','o', 'o', 'o','w','w', 'w'],
+    ['w', 'o', 'o', 'o','o','o','o', 'o', 'o','o', 'o', 'o', 'w'],
+    ['w', 'o', 'o', 'o','o', 'o', 'o','o', 'o', 'o','w','w', 'w'],
     ['w', 'o', 'o', 'o','o', 'o', 'o','o', 'o', 'o', 'w'],
     ['w', 'o', 'o', 'o','o', 'o', 'o','o', 'o', 'o', 'w'],
     ['w', 'o', 'o', 'o','o', 'o', 'o','o', 'o', 'o', 'w'],
@@ -34,5 +34,9 @@ $(function() {
 
   App.player = new App.models.player();
   App.instances.push(App.player);
+  _.each(App.instances, function(instance) {
+    instance.registerPosition();
+    instance.draw();
+  });
 });
 
