@@ -33,5 +33,9 @@ Object.build = function(Constructor,template,Parent) {
   Constructor.prototype.super = function() {
     Parent.apply(this,arguments)
   }
+}
 
+// Warning! Stupid capitalize, only works on non-space-prefixed single words.
+String.prototype.capitalize = function() {
+  return this.replace(/^./,this.charAt(0).toUpperCase());
 }

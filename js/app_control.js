@@ -1,10 +1,10 @@
 App.control = {
 
   keymap: {
-    left:  function() {  App.player.move(-1,0); App.step();},
-    right: function() {  App.player.move(1,0); App.step();},
-    up:    function() {  App.player.move(0,-1); App.step();},
-    down:  function() {  App.player.move(0,1); App.step();}
+    left:  function() {  App.player.act(-1,0); App.step();},
+    right: function() {  App.player.act(1,0); App.step();},
+    up:    function() {  App.player.act(0,-1); App.step();},
+    down:  function() {  App.player.act(0,1); App.step();}
   },
 
   initialize: function() {

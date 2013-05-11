@@ -87,8 +87,8 @@
   margin: 50px auto;
   border: 1px solid black;
   text-align: center;
-  line-height: 1.5;
-  font-size: 1.2em;
+  font-size: 0.84em;
+  line-height: 1.2;
 }
 
 #status .old {

@@ -24,6 +24,7 @@ App.modelTemplates = {
 
   "creature": {
     parent: "element",
+    team: 1,
     initialize: function() {
       this.x = 0;
       this.y = 0;
@@ -41,18 +42,26 @@ App.modelTemplates = {
       }
     },
 
+    touchingEnemies: function() {
+      return _.filter(App.map.getTouching(this.x,this.y), function(el) { return (this.team & el.team) != this.team }, this)
+    },
+    canMove: function(x,y) {
+      return App.map.isWalkable(x,y);
+    },
+
     attack: function(enemy) {
+      App.setStatus(this.name.capitalize() + " attaque "+ enemy.name.capitalize() + " !");
       enemy.hurt(this.dmg);
-      App.setStatus("Attacking enemy!");
     },
 
     hurt: function(dmg) {
       this.hp = Math.max(0, this.hp-dmg);
+      App.setStatus(this.name.capitalize() + " reçoit "+ dmg + " points de dégâts ! Il lui reste " + this.hp + "pv !");
       if (this.hp == 0) { this.die(); }
     },
 
     die: function() {
-      App.setStatus("is dead!");
+      App.setStatus(this.name.capitalize() + " est mort!");
       this.dead = true;
     },
 
@@ -70,7 +79,6 @@ App.modelTemplates = {
   },
 
   "object": {
-    team: -1 // Bitwise 11...11 so neutral with & operation
   },
 
   // FIXME: Les changements sur références objets imbriqués ne sont pas suivis.
@@ -80,14 +88,8 @@ App.modelTemplates = {
     initialize: function() {
       this.attributes = {};
     },
-    team: 1,
+    team: -1, // Bitwise 11...11 so neutral with & operation
     walkable: false,
-    touchingEnemies: function() {
-      return _.filter(App.map.getTouching(this.x,this.y), function(el) { return this.team & el.team != this.team }, this)
-    },
-    canMove: function(x,y) {
-      return App.map.isWalkable(x,y);
-    },
     isWalkable: function() {
       return !!this.walkable;
     },
@@ -117,11 +119,20 @@ App.modelTemplates = {
   "player": {
     parent: "creature",
     team: 2,
-    dmg: 10,
+    dmg: 0,
     initialize: function() {
       this.super();
+      this.name = "Joueur";
       this.x = this.start[0];
       this.y = this.start[1];
+    },
+    act: function(dx,dy) {
+      var enemy = _.find(this.touchingEnemies(), function(e) { return dx === e.x-this.x && dy === e.y-this.y }, this);
+      if (enemy) {
+        this.attack(enemy);
+      } else {
+        this.move(dx,dy);
+      }
     },
     start: [3,3]
   }
