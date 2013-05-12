@@ -2,42 +2,26 @@
 // a été créé. Cela évite d'avoir du code qui demande l'élément X alors que X n'a
 // pas encore été créé.
 $(function() {
-  var map = [
-    ['w', 'w', 'w', 'w', 'w', 'w', 'w','w', 'w', 'w','w'],
-    ['w', 'o', 'o', 'o','o', 'o', 'o','o', 'o', 'o','w','w', 'w'],
-    ['w', 'o', 'o', 'o','o','o','o', 'o', 'o','o', 'o', 'o', 'w'],
-    ['w', 'o', 'o', 'o','o', 'o', 'o','o', 'o', 'o','w','w', 'w'],
-    ['w', 'o', 'o', 'o','o', 'o', 'o','o', 'o', 'o', 'w'],
-    ['w', 'o', 'o', 'o','o', 'o', 'o','o', 'o', 'o', 'w'],
-    ['w', 'o', 'o', 'o','o', 'o', 'o','o', 'o', 'o', 'w'],
-    ['w', 'o', 'o', 'o','o', 'o', 'o','o', 'o', 'o', 'w'],
-    ['w', 'o', 'o', 'o','o', 'o', 'o','o', 'o', 'o', 'w'],
-    ['w', 'w', 'w', 'w', 'w', 'w', 'w','w', 'w', 'w','w']
-  ];
-
-  var instances = [{ model_id: "spider", attributes: { x: 3, y: 6 }}];
-
+  App.initialize();
   App.control.initialize();
-  App.map.initialize(map);
+  App.getMap(1, function(tiles, instances) {
 
-  for (var name in App.modelTemplates) {
-    App.buildModel(name);
-  }
+    App.map.initialize(tiles);
 
-  _.each(instances, function(instance) {
-    var obj = new App.models[instance.model_id]();
-    for (var prop in instance.attributes) {
-      obj[prop] = instance.attributes[prop];
-    }
-    App.instances.push(obj);
-  });
+    _.each(instances, function(instance) {
+      var obj = new App.models[instance.model_id]();
+      for (var prop in instance.attributes) {
+        obj[prop] = instance.attributes[prop];
+      }
+      obj.type = instance.model_id; // FIXME ugly, set it up automatically / separate it from name
+      App.instances.push(obj);
+    });
 
-  App.player = new App.models.player();
-  App.instances.push(App.player);
+    App.player = _.find(App.instances, function(el) { return el.type === "player"; });
 
-  App.map.draw();
-  _.each(App.instances, function(instance) {
-    instance.draw();
+    App.map.draw();
+    _.each(App.instances, function(instance) {
+      instance.draw();
+    });
   });
 });
-

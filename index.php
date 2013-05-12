@@ -14,6 +14,7 @@
 
     <script src="js/core.js"></script>
     <script src="js/app.js"></script>
+    <script src="js/app_ajax.js"></script>
     <script src="js/app_map.js"></script>
     <script src="js/app_models.js"></script>
     <script src="js/app_control.js"></script>

@@ -3,6 +3,12 @@ App.models = {};
 App.instances = [];
 App.status = [];
 
+App.initialize = function() {
+  for (var name in App.modelTemplates) {
+    App.buildModel(name);
+  }
+};
+
 App.setStatus = function(str) {
   App.status.push(str);
 };
