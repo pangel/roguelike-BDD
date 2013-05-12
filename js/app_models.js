@@ -26,24 +26,27 @@ App.modelTemplates = {
     parent: "element",
     team: 1,
     initialize: function() {
-      this.x = 0;
-      this.y = 0;
+      this.set('x',0);
+      this.set('y',0);
       this.$el = $("<div></div>");
       this.$el.addClass(this.chain.join(' '));
       $('#elements').append(this.$el);
     },
-    hp: 30,
     dmg: 5,
+    attributes: {
+      hp: 30
+    },
     move: function(x,y) {
-      var newX = this.x+x, newY = this.y+y;
+      var newX = this.get('x')+x,
+          newY = this.get('y')+y;
       if (this.canMove(newX,newY)) {
-        this.x = newX;
-        this.y = newY;
+        this.set('x',newX);
+        this.set('y',newY);
       }
     },
 
     touchingEnemies: function() {
-      return _.filter(App.map.getTouching(this.x,this.y), function(el) { return (this.team & el.team) != this.team }, this)
+      return _.filter(App.map.getTouching(this.get('x'),this.get('y')), function(el) { return (this.team & el.team) != this.team }, this)
     },
     canMove: function(x,y) {
       return App.map.isWalkable(x,y);
@@ -55,9 +58,9 @@ App.modelTemplates = {
     },
 
     hurt: function(dmg) {
-      this.hp = Math.max(0, this.hp-dmg);
-      App.setStatus(this.name.capitalize() + " reçoit "+ dmg + " points de dégâts ! Il lui reste " + this.hp + "pv !");
-      if (this.hp == 0) { this.die(); }
+      this.set('hp',Math.max(0, this.get('hp')-dmg));
+      App.setStatus(this.name.capitalize() + " reçoit "+ dmg + " points de dégâts ! Il lui reste " + this.get('hp') + "pv !");
+      if (this.get('hp') == 0) { this.die(); }
     },
 
     die: function() {
@@ -73,7 +76,7 @@ App.modelTemplates = {
         App.map.disappearElement(this.$el);
         App.removeInstance(this);
       } else {
-        App.map.positionElement(this.$el,this.x,this.y);
+        App.map.positionElement(this.$el,this.get('x'),this.get('y'));
       }
     }
   },
@@ -86,7 +89,10 @@ App.modelTemplates = {
   // FIXME: how to allow nested changes?
   "element": {
     initialize: function() {
-      this.attributes = {};
+    },
+    attributes: {
+      x: 0,
+      y: 0
     },
     team: -1, // Bitwise 11...11 so neutral with & operation
     walkable: false,
@@ -123,17 +129,14 @@ App.modelTemplates = {
     initialize: function() {
       this.super();
       this.name = "Joueur";
-      this.x = this.start[0];
-      this.y = this.start[1];
     },
     act: function(dx,dy) {
-      var enemy = _.find(this.touchingEnemies(), function(e) { return dx === e.x-this.x && dy === e.y-this.y }, this);
+      var enemy = _.find(this.touchingEnemies(), function(e) { return dx === e.get('x')-this.get('x') && dy === e.get('y')-this.get('y') }, this);
       if (enemy) {
         this.attack(enemy);
       } else {
         this.move(dx,dy);
       }
-    },
-    start: [3,3]
+    }
   }
 };

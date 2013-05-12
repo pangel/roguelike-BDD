@@ -4,18 +4,12 @@
 $(function() {
   App.initialize();
   App.control.initialize();
-  App.getMap(1, function(tiles, instances) {
+  var mapId = 1;
+  App.getMap(mapId, function(tiles, instances) {
 
     App.map.initialize(tiles);
 
-    _.each(instances, function(instance) {
-      var obj = new App.models[instance.model_id]();
-      for (var prop in instance.attributes) {
-        obj[prop] = instance.attributes[prop];
-      }
-      obj.type = instance.model_id; // FIXME ugly, set it up automatically / separate it from name
-      App.instances.push(obj);
-    });
+    App.initializeInstances(mapId, instances);
 
     App.player = _.find(App.instances, function(el) { return el.type === "player"; });
 

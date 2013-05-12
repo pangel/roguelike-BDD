@@ -39,3 +39,17 @@ Object.build = function(Constructor,template,Parent) {
 String.prototype.capitalize = function() {
   return this.replace(/^./,this.charAt(0).toUpperCase());
 }
+
+// Simplified version of
+// http://www.broofa.com/Tools/Math.uuid.js
+Math.uuid = function () {
+  var chars = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'.split(''),
+      radix = chars.length,
+      uuid = [];
+
+  for (var i = 0; i < 12; i++) {
+    uuid[i] = chars[0 | Math.random()*radix];
+  }
+
+  return uuid.join('');
+}

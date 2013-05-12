@@ -9,6 +9,25 @@ App.initialize = function() {
   }
 };
 
+App.initializeInstances = function(mapId, instances) {
+  _.each(instances, function(instance) {
+    var obj = new App.models[instance.model_id]();
+    for (var prop in instance.attributes) {
+      obj.set(prop,instance.attributes[prop]);
+    }
+
+    if (instance.instance_id) {
+      obj.set('instance_id',instance.instance_id);
+    } else {
+      obj.set('instance_id', ""+mapId+"-"+Math.uuid());
+    }
+
+    obj.type = instance.model_id; // FIXME ugly, set it up automatically / separate it from name
+    App.instances.push(obj);
+  });
+};
+
+
 App.setStatus = function(str) {
   App.status.push(str);
 };
@@ -44,6 +63,7 @@ App.step = function() {
   App.instances = _.compact(App.instances);
 
   App.drawStatus();
+  App.sendGame(App.dump());
 };
 
 // Once a model was built and put into App.models, call new App.models.model_name() to create an instance an initialize it.
@@ -57,17 +77,34 @@ App.buildModel = function(name) {
 
   var template = App.modelTemplates[name];
 
+  // The prototype default attributes are privately copied into the new object.
   // The constructor can be specified in the template. Otherwise, it will just call super().
-  var Constructor = template.initialize || function() { this.super(); };
+  var Constructor = function() {
+    this.attributes = _.extend({},this.attributes);
+    if (template.initialize) {
+      _.bind(template.initialize, this)(arguments);
+    } else {
+      this.super();
+    }
+  };
 
   // The constructor of the parent will be bound to super(). If there is no parent,
   // super will be the empty function.
   var ParentConstructor = template.parent ? this.buildModel(template.parent) : function() {};
 
+  // Each object can specify its attributes; they will be added to their prototype's attributes
+  // (and erase them in case of conflict)
   template.chain = (ParentConstructor.prototype.chain || []).concat([name]);
+  template.attributes = _.extend({}, ParentConstructor.prototype.attributes, template.attributes);
   template.name = name;
 
   Object.build(Constructor, template, ParentConstructor);
 
   return App.models[name] = Constructor;
+};
+
+App.dump = function() {
+  return _.map(App.instances, function(instance) {
+    return _.extend({},instance.attributes,{type:instance.type});
+  });
 };

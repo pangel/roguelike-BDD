@@ -3,13 +3,15 @@ Le schéma pour l'instant:
 joueur
  foreign_key carte
 
-tile
-  int x
-  int y
-  type (enum bois, pierre, mur, ...)
-  foreign_key carte
-  foreign_key ou NULL monstre/coffre/objet/etc.
-  foreign_key porte_vers
+DEPREC
+  tile
+    int x
+    int y
+    type (enum bois, pierre, mur, ...)
+    foreign_key carte
+    foreign_key ou NULL monstre/coffre/objet/etc.
+    foreign_key porte_vers
+/DEPREC
 
 carte
   id
@@ -30,7 +32,6 @@ inventaire
 etat
   foreign_key joueur
   foreign_key carte
-
 
 instances
   foreign_key joueur

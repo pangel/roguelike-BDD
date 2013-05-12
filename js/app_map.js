@@ -26,14 +26,14 @@ App.map.disappearElement = function($el) {
 
 App.map.isWalkable = function(x,y) {
   return App.map.data[y] && App.map.data[y][x] && App.map.data[y][x] != "w" &&
-         !_.find(App.instances, function(e) { return e.x === x && e.y === y && !e.isWalkable(); });
+         !_.find(App.instances, function(e) { return e.get('x') === x && e.get('y') === y && !e.isWalkable(); });
 };
 
 // No diagonals
 App.map.getTouching = function(x,y) {
   return _.filter(App.instances, function(e) {
-    return (e.x === x && Math.abs(e.y - y) === 1) ||
-           (e.y === y && Math.abs(e.x - x) === 1);
+    return (e.get('x') === x && Math.abs(e.get('y') - y) === 1) ||
+           (e.get('y') === y && Math.abs(e.get('x') - x) === 1);
   });
 };
 
