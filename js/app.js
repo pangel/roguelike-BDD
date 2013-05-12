@@ -9,9 +9,9 @@ App.initialize = function() {
   }
 };
 
-App.initializeInstances = function(mapId, instances) {
+App.initializeInstances = function(instances) {
   _.each(instances, function(instance) {
-    var obj = new App.models[instance.model_id]();
+    var obj = new App.models[instance.type]();
     for (var prop in instance.attributes) {
       obj.set(prop,instance.attributes[prop]);
     }
@@ -19,14 +19,13 @@ App.initializeInstances = function(mapId, instances) {
     if (instance.instance_id) {
       obj.set('instance_id',instance.instance_id);
     } else {
-      obj.set('instance_id', ""+mapId+"-"+Math.uuid());
+      obj.set('instance_id', Math.uuid());
     }
 
-    obj.type = instance.model_id; // FIXME ugly, set it up automatically / separate it from name
+    obj.type = instance.type; // FIXME ugly, set it up automatically / separate it from name
     App.instances.push(obj);
   });
 };
-
 
 App.setStatus = function(str) {
   App.status.push(str);

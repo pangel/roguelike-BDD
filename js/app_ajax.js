@@ -8,15 +8,15 @@
       var tiles = _.map(data.map.tiles.split('\n'), function(s) {
         return s.split('')
       });
-      var instances = _.map(data.content, function(el) {
-        return { model_id: el.type, attributes: { x: el.startX, y: el.startY } };
+      var instances = _.map(data.instances, function(el) {
+        return { type: el.type, attributes: _.omit(el,type) };
       });
       success(tiles,instances);
     };
   };
 
 App.ajax = function(params) {
-  return $.get('/bdd/connect.php', params).error(function(err) { error('Erreur serveur', err) });
+  return $.get('/bdd/update.php', params).error(function(err) { error('Erreur serveur', err) });
 }
 
 App.getMap = function(mapId, success) {
@@ -34,7 +34,7 @@ App.sendGame = function(instances) {
              attributes: _.omit(attrs, 'instance_id', 'type')
            };
   });
-  this.ajax({method:"update",instances: instances});
+  this.ajax({game: Bootstrap.game_id, instances: instances});
 };
 
 })();
