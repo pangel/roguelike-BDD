@@ -17,43 +17,37 @@ function connect() {
 }
 
 function add_player() {
-  $sql_add_player = "INSERT INTO player (name) VALUES ('JoueurX')";
-  $conn->query($sql_add_player);
+  $conn->query("INSERT INTO player (name) VALUES ('JoueurX')");
   return $conn->lastInsertId();
 }
 
 function add_game($player_id,$map_id) {
   $conn = connect();
-  $sql_add_game = "INSERT INTO game (player_id,map_id) VALUES (:player_id, :map_id)";
-  $add_game = $conn->prepare($sql_add_game);
+  $add_game = $conn->prepare("INSERT INTO game (player_id,map_id) VALUES (:player_id, :map_id)");
   $add_game->execute(array("player_id" => $player_id, "map_id" => $map_id));
   return $conn->lastInsertId();
 }
 
 function get_games($player_id) {
   $conn = connect();
-  $sql_get_games = "SELECT game.id,map.name FROM game,map WHERE game.player_id = :player_id AND map.id = game.map_id";
-  $get_games = $conn->prepare($sql_get_games);
+  $get_games = $conn->prepare("SELECT game.id,map.name FROM game,map WHERE game.player_id = :player_id AND map.id = game.map_id");
   $get_games->execute(array("player_id" => $player_id));
 
   return $get_games->fetchAll(PDO::FETCH_ASSOC);
 }
 
 function get_maps() {
-  $sql_get_maps = "SELECT * FROM map";
   $conn = connect();
-  $get_maps = $conn->query($sql_get_maps);
+  $get_maps = $conn->query("SELECT * FROM map");
 
   return $get_maps->fetchAll(PDO::FETCH_ASSOC);
 }
 
 function get_map($id) {
-  $sql_get_map = "SELECT * FROM map WHERE id = :id";
-  $sql_get_map_instances = "SELECT * FROM map_content WHERE map_id = :id";
   $conn = connect();
   $data = array('id' => $id);
-  $get_map = $conn->prepare($sql_get_map);
-  $get_instances = $conn->prepare($sql_get_map_instances);
+  $get_map = $conn->prepare("SELECT * FROM map WHERE id = :id");
+  $get_instances = $conn->prepare("SELECT * FROM map_content WHERE map_id = :id");
   $get_map->execute($data);
   $get_instances->execute($data);
 
@@ -67,8 +61,7 @@ function get_game($game_id) {
   $conn = connect();
   $data = array('id' => $game_id);
 
-  $sql_get_map = "SELECT map.tiles FROM game,map WHERE game.id = :id AND map.id = game.map_id";
-  $get_map = $conn->prepare($sql_get_map);
+  $get_map = $conn->prepare("SELECT map.tiles FROM game,map WHERE game.id = :id AND map.id = game.map_id");
   $get_map->execute($data);
 
   $sql_get_instances = "SELECT * FROM instance WHERE game_id = :id";
@@ -85,7 +78,7 @@ function get_game($game_id) {
 
 function update_game($game_id, $instances) {
 
-  $sql_update_instance = <<<SQL
+  $update_instance = $conn->prepare(<<<SQL
   INSERT INTO instance (game_id, instance_id, type, attributes) 
                 VALUES (:game_id,:instance_id,:type,:attributes)
   ON DUPLICATE KEY UPDATE 
@@ -93,11 +86,10 @@ function update_game($game_id, $instances) {
               instance_id=VALUES(instance_id), 
                      type=VALUES(type), 
                attributes=VALUES(attributes)
-SQL;
-
+SQL
+  );
 
   $conn = connect();
-  $update_instance = $conn->prepare($sql_update_instance);
   foreach ($instances as $instance) {
     if (is_array($instance['attributes'])) {
       $attributes = json_encode($instance['attributes'], JSON_NUMERIC_CHECK);
