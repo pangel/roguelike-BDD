@@ -56,6 +56,7 @@ try {
       ?>
     </script>
     <link rel="stylesheet" href="style.css"></link>
+    <link rel="stylesheet" href="shadows.css"></link>
     </style>
     
   </head>

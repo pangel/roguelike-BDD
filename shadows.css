@@ -1,0 +1,2299 @@
+    .o.wup {
+      background-image: 
+        url('images/wup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wrightup {
+      background-image: 
+        url('images/wrightup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wright {
+      background-image: 
+        url('images/wright.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wrightdown {
+      background-image: 
+        url('images/wrightdown.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wdown {
+      background-image: 
+        url('images/wdown.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wleftdown {
+      background-image: 
+        url('images/wleftdown.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wleft {
+      background-image: 
+        url('images/wleft.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wleftup {
+      background-image: 
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wrightup {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wrightup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wright {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wright.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wrightdown {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wrightdown.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wdown {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wdown.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wleftdown {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wleftdown.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wleft {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wleft.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wleftup {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wrightup.wright {
+      background-image: 
+        url('images/wrightup.png'),
+        url('images/wright.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wrightup.wrightdown {
+      background-image: 
+        url('images/wrightup.png'),
+        url('images/wrightdown.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wrightup.wdown {
+      background-image: 
+        url('images/wrightup.png'),
+        url('images/wdown.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wrightup.wleftdown {
+      background-image: 
+        url('images/wrightup.png'),
+        url('images/wleftdown.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wrightup.wleft {
+      background-image: 
+        url('images/wrightup.png'),
+        url('images/wleft.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wrightup.wleftup {
+      background-image: 
+        url('images/wrightup.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wright.wrightdown {
+      background-image: 
+        url('images/wright.png'),
+        url('images/wrightdown.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wright.wdown {
+      background-image: 
+        url('images/wright.png'),
+        url('images/wdown.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wright.wleftdown {
+      background-image: 
+        url('images/wright.png'),
+        url('images/wleftdown.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wright.wleft {
+      background-image: 
+        url('images/wright.png'),
+        url('images/wleft.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wright.wleftup {
+      background-image: 
+        url('images/wright.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wrightdown.wdown {
+      background-image: 
+        url('images/wrightdown.png'),
+        url('images/wdown.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wrightdown.wleftdown {
+      background-image: 
+        url('images/wrightdown.png'),
+        url('images/wleftdown.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wrightdown.wleft {
+      background-image: 
+        url('images/wrightdown.png'),
+        url('images/wleft.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wrightdown.wleftup {
+      background-image: 
+        url('images/wrightdown.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wdown.wleftdown {
+      background-image: 
+        url('images/wdown.png'),
+        url('images/wleftdown.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wdown.wleft {
+      background-image: 
+        url('images/wdown.png'),
+        url('images/wleft.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wdown.wleftup {
+      background-image: 
+        url('images/wdown.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wleftdown.wleft {
+      background-image: 
+        url('images/wleftdown.png'),
+        url('images/wleft.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wleftdown.wleftup {
+      background-image: 
+        url('images/wleftdown.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wleft.wleftup {
+      background-image: 
+        url('images/wleft.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wrightup.wright {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wrightup.png'),
+        url('images/wright.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wrightup.wrightdown {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wrightup.png'),
+        url('images/wrightdown.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wrightup.wdown {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wrightup.png'),
+        url('images/wdown.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wrightup.wleftdown {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wrightup.png'),
+        url('images/wleftdown.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wrightup.wleft {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wrightup.png'),
+        url('images/wleft.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wrightup.wleftup {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wrightup.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wright.wrightdown {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wright.png'),
+        url('images/wrightdown.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wright.wdown {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wright.png'),
+        url('images/wdown.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wright.wleftdown {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wright.png'),
+        url('images/wleftdown.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wright.wleft {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wright.png'),
+        url('images/wleft.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wright.wleftup {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wright.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wrightdown.wdown {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wrightdown.png'),
+        url('images/wdown.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wrightdown.wleftdown {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wrightdown.png'),
+        url('images/wleftdown.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wrightdown.wleft {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wrightdown.png'),
+        url('images/wleft.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wrightdown.wleftup {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wrightdown.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wdown.wleftdown {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wdown.png'),
+        url('images/wleftdown.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wdown.wleft {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wdown.png'),
+        url('images/wleft.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wdown.wleftup {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wdown.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wleftdown.wleft {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wleftdown.png'),
+        url('images/wleft.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wleftdown.wleftup {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wleftdown.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wleft.wleftup {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wleft.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wrightup.wright.wrightdown {
+      background-image: 
+        url('images/wrightup.png'),
+        url('images/wright.png'),
+        url('images/wrightdown.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wrightup.wright.wdown {
+      background-image: 
+        url('images/wrightup.png'),
+        url('images/wright.png'),
+        url('images/wdown.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wrightup.wright.wleftdown {
+      background-image: 
+        url('images/wrightup.png'),
+        url('images/wright.png'),
+        url('images/wleftdown.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wrightup.wright.wleft {
+      background-image: 
+        url('images/wrightup.png'),
+        url('images/wright.png'),
+        url('images/wleft.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wrightup.wright.wleftup {
+      background-image: 
+        url('images/wrightup.png'),
+        url('images/wright.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wrightup.wrightdown.wdown {
+      background-image: 
+        url('images/wrightup.png'),
+        url('images/wrightdown.png'),
+        url('images/wdown.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wrightup.wrightdown.wleftdown {
+      background-image: 
+        url('images/wrightup.png'),
+        url('images/wrightdown.png'),
+        url('images/wleftdown.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wrightup.wrightdown.wleft {
+      background-image: 
+        url('images/wrightup.png'),
+        url('images/wrightdown.png'),
+        url('images/wleft.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wrightup.wrightdown.wleftup {
+      background-image: 
+        url('images/wrightup.png'),
+        url('images/wrightdown.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wrightup.wdown.wleftdown {
+      background-image: 
+        url('images/wrightup.png'),
+        url('images/wdown.png'),
+        url('images/wleftdown.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wrightup.wdown.wleft {
+      background-image: 
+        url('images/wrightup.png'),
+        url('images/wdown.png'),
+        url('images/wleft.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wrightup.wdown.wleftup {
+      background-image: 
+        url('images/wrightup.png'),
+        url('images/wdown.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wrightup.wleftdown.wleft {
+      background-image: 
+        url('images/wrightup.png'),
+        url('images/wleftdown.png'),
+        url('images/wleft.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wrightup.wleftdown.wleftup {
+      background-image: 
+        url('images/wrightup.png'),
+        url('images/wleftdown.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wrightup.wleft.wleftup {
+      background-image: 
+        url('images/wrightup.png'),
+        url('images/wleft.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wright.wrightdown.wdown {
+      background-image: 
+        url('images/wright.png'),
+        url('images/wrightdown.png'),
+        url('images/wdown.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wright.wrightdown.wleftdown {
+      background-image: 
+        url('images/wright.png'),
+        url('images/wrightdown.png'),
+        url('images/wleftdown.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wright.wrightdown.wleft {
+      background-image: 
+        url('images/wright.png'),
+        url('images/wrightdown.png'),
+        url('images/wleft.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wright.wrightdown.wleftup {
+      background-image: 
+        url('images/wright.png'),
+        url('images/wrightdown.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wright.wdown.wleftdown {
+      background-image: 
+        url('images/wright.png'),
+        url('images/wdown.png'),
+        url('images/wleftdown.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wright.wdown.wleft {
+      background-image: 
+        url('images/wright.png'),
+        url('images/wdown.png'),
+        url('images/wleft.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wright.wdown.wleftup {
+      background-image: 
+        url('images/wright.png'),
+        url('images/wdown.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wright.wleftdown.wleft {
+      background-image: 
+        url('images/wright.png'),
+        url('images/wleftdown.png'),
+        url('images/wleft.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wright.wleftdown.wleftup {
+      background-image: 
+        url('images/wright.png'),
+        url('images/wleftdown.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wright.wleft.wleftup {
+      background-image: 
+        url('images/wright.png'),
+        url('images/wleft.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wrightdown.wdown.wleftdown {
+      background-image: 
+        url('images/wrightdown.png'),
+        url('images/wdown.png'),
+        url('images/wleftdown.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wrightdown.wdown.wleft {
+      background-image: 
+        url('images/wrightdown.png'),
+        url('images/wdown.png'),
+        url('images/wleft.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wrightdown.wdown.wleftup {
+      background-image: 
+        url('images/wrightdown.png'),
+        url('images/wdown.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wrightdown.wleftdown.wleft {
+      background-image: 
+        url('images/wrightdown.png'),
+        url('images/wleftdown.png'),
+        url('images/wleft.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wrightdown.wleftdown.wleftup {
+      background-image: 
+        url('images/wrightdown.png'),
+        url('images/wleftdown.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wrightdown.wleft.wleftup {
+      background-image: 
+        url('images/wrightdown.png'),
+        url('images/wleft.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wdown.wleftdown.wleft {
+      background-image: 
+        url('images/wdown.png'),
+        url('images/wleftdown.png'),
+        url('images/wleft.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wdown.wleftdown.wleftup {
+      background-image: 
+        url('images/wdown.png'),
+        url('images/wleftdown.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wdown.wleft.wleftup {
+      background-image: 
+        url('images/wdown.png'),
+        url('images/wleft.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wleftdown.wleft.wleftup {
+      background-image: 
+        url('images/wleftdown.png'),
+        url('images/wleft.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wrightup.wright.wrightdown {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wrightup.png'),
+        url('images/wright.png'),
+        url('images/wrightdown.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wrightup.wright.wdown {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wrightup.png'),
+        url('images/wright.png'),
+        url('images/wdown.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wrightup.wright.wleftdown {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wrightup.png'),
+        url('images/wright.png'),
+        url('images/wleftdown.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wrightup.wright.wleft {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wrightup.png'),
+        url('images/wright.png'),
+        url('images/wleft.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wrightup.wright.wleftup {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wrightup.png'),
+        url('images/wright.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wrightup.wrightdown.wdown {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wrightup.png'),
+        url('images/wrightdown.png'),
+        url('images/wdown.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wrightup.wrightdown.wleftdown {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wrightup.png'),
+        url('images/wrightdown.png'),
+        url('images/wleftdown.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wrightup.wrightdown.wleft {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wrightup.png'),
+        url('images/wrightdown.png'),
+        url('images/wleft.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wrightup.wrightdown.wleftup {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wrightup.png'),
+        url('images/wrightdown.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wrightup.wdown.wleftdown {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wrightup.png'),
+        url('images/wdown.png'),
+        url('images/wleftdown.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wrightup.wdown.wleft {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wrightup.png'),
+        url('images/wdown.png'),
+        url('images/wleft.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wrightup.wdown.wleftup {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wrightup.png'),
+        url('images/wdown.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wrightup.wleftdown.wleft {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wrightup.png'),
+        url('images/wleftdown.png'),
+        url('images/wleft.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wrightup.wleftdown.wleftup {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wrightup.png'),
+        url('images/wleftdown.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wrightup.wleft.wleftup {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wrightup.png'),
+        url('images/wleft.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wright.wrightdown.wdown {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wright.png'),
+        url('images/wrightdown.png'),
+        url('images/wdown.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wright.wrightdown.wleftdown {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wright.png'),
+        url('images/wrightdown.png'),
+        url('images/wleftdown.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wright.wrightdown.wleft {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wright.png'),
+        url('images/wrightdown.png'),
+        url('images/wleft.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wright.wrightdown.wleftup {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wright.png'),
+        url('images/wrightdown.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wright.wdown.wleftdown {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wright.png'),
+        url('images/wdown.png'),
+        url('images/wleftdown.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wright.wdown.wleft {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wright.png'),
+        url('images/wdown.png'),
+        url('images/wleft.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wright.wdown.wleftup {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wright.png'),
+        url('images/wdown.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wright.wleftdown.wleft {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wright.png'),
+        url('images/wleftdown.png'),
+        url('images/wleft.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wright.wleftdown.wleftup {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wright.png'),
+        url('images/wleftdown.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wright.wleft.wleftup {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wright.png'),
+        url('images/wleft.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wrightdown.wdown.wleftdown {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wrightdown.png'),
+        url('images/wdown.png'),
+        url('images/wleftdown.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wrightdown.wdown.wleft {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wrightdown.png'),
+        url('images/wdown.png'),
+        url('images/wleft.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wrightdown.wdown.wleftup {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wrightdown.png'),
+        url('images/wdown.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wrightdown.wleftdown.wleft {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wrightdown.png'),
+        url('images/wleftdown.png'),
+        url('images/wleft.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wrightdown.wleftdown.wleftup {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wrightdown.png'),
+        url('images/wleftdown.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wrightdown.wleft.wleftup {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wrightdown.png'),
+        url('images/wleft.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wdown.wleftdown.wleft {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wdown.png'),
+        url('images/wleftdown.png'),
+        url('images/wleft.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wdown.wleftdown.wleftup {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wdown.png'),
+        url('images/wleftdown.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wdown.wleft.wleftup {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wdown.png'),
+        url('images/wleft.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wleftdown.wleft.wleftup {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wleftdown.png'),
+        url('images/wleft.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wrightup.wright.wrightdown.wdown {
+      background-image: 
+        url('images/wrightup.png'),
+        url('images/wright.png'),
+        url('images/wrightdown.png'),
+        url('images/wdown.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wrightup.wright.wrightdown.wleftdown {
+      background-image: 
+        url('images/wrightup.png'),
+        url('images/wright.png'),
+        url('images/wrightdown.png'),
+        url('images/wleftdown.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wrightup.wright.wrightdown.wleft {
+      background-image: 
+        url('images/wrightup.png'),
+        url('images/wright.png'),
+        url('images/wrightdown.png'),
+        url('images/wleft.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wrightup.wright.wrightdown.wleftup {
+      background-image: 
+        url('images/wrightup.png'),
+        url('images/wright.png'),
+        url('images/wrightdown.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wrightup.wright.wdown.wleftdown {
+      background-image: 
+        url('images/wrightup.png'),
+        url('images/wright.png'),
+        url('images/wdown.png'),
+        url('images/wleftdown.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wrightup.wright.wdown.wleft {
+      background-image: 
+        url('images/wrightup.png'),
+        url('images/wright.png'),
+        url('images/wdown.png'),
+        url('images/wleft.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wrightup.wright.wdown.wleftup {
+      background-image: 
+        url('images/wrightup.png'),
+        url('images/wright.png'),
+        url('images/wdown.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wrightup.wright.wleftdown.wleft {
+      background-image: 
+        url('images/wrightup.png'),
+        url('images/wright.png'),
+        url('images/wleftdown.png'),
+        url('images/wleft.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wrightup.wright.wleftdown.wleftup {
+      background-image: 
+        url('images/wrightup.png'),
+        url('images/wright.png'),
+        url('images/wleftdown.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wrightup.wright.wleft.wleftup {
+      background-image: 
+        url('images/wrightup.png'),
+        url('images/wright.png'),
+        url('images/wleft.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wrightup.wrightdown.wdown.wleftdown {
+      background-image: 
+        url('images/wrightup.png'),
+        url('images/wrightdown.png'),
+        url('images/wdown.png'),
+        url('images/wleftdown.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wrightup.wrightdown.wdown.wleft {
+      background-image: 
+        url('images/wrightup.png'),
+        url('images/wrightdown.png'),
+        url('images/wdown.png'),
+        url('images/wleft.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wrightup.wrightdown.wdown.wleftup {
+      background-image: 
+        url('images/wrightup.png'),
+        url('images/wrightdown.png'),
+        url('images/wdown.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wrightup.wrightdown.wleftdown.wleft {
+      background-image: 
+        url('images/wrightup.png'),
+        url('images/wrightdown.png'),
+        url('images/wleftdown.png'),
+        url('images/wleft.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wrightup.wrightdown.wleftdown.wleftup {
+      background-image: 
+        url('images/wrightup.png'),
+        url('images/wrightdown.png'),
+        url('images/wleftdown.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wrightup.wrightdown.wleft.wleftup {
+      background-image: 
+        url('images/wrightup.png'),
+        url('images/wrightdown.png'),
+        url('images/wleft.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wrightup.wdown.wleftdown.wleft {
+      background-image: 
+        url('images/wrightup.png'),
+        url('images/wdown.png'),
+        url('images/wleftdown.png'),
+        url('images/wleft.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wrightup.wdown.wleftdown.wleftup {
+      background-image: 
+        url('images/wrightup.png'),
+        url('images/wdown.png'),
+        url('images/wleftdown.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wrightup.wdown.wleft.wleftup {
+      background-image: 
+        url('images/wrightup.png'),
+        url('images/wdown.png'),
+        url('images/wleft.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wrightup.wleftdown.wleft.wleftup {
+      background-image: 
+        url('images/wrightup.png'),
+        url('images/wleftdown.png'),
+        url('images/wleft.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wright.wrightdown.wdown.wleftdown {
+      background-image: 
+        url('images/wright.png'),
+        url('images/wrightdown.png'),
+        url('images/wdown.png'),
+        url('images/wleftdown.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wright.wrightdown.wdown.wleft {
+      background-image: 
+        url('images/wright.png'),
+        url('images/wrightdown.png'),
+        url('images/wdown.png'),
+        url('images/wleft.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wright.wrightdown.wdown.wleftup {
+      background-image: 
+        url('images/wright.png'),
+        url('images/wrightdown.png'),
+        url('images/wdown.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wright.wrightdown.wleftdown.wleft {
+      background-image: 
+        url('images/wright.png'),
+        url('images/wrightdown.png'),
+        url('images/wleftdown.png'),
+        url('images/wleft.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wright.wrightdown.wleftdown.wleftup {
+      background-image: 
+        url('images/wright.png'),
+        url('images/wrightdown.png'),
+        url('images/wleftdown.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wright.wrightdown.wleft.wleftup {
+      background-image: 
+        url('images/wright.png'),
+        url('images/wrightdown.png'),
+        url('images/wleft.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wright.wdown.wleftdown.wleft {
+      background-image: 
+        url('images/wright.png'),
+        url('images/wdown.png'),
+        url('images/wleftdown.png'),
+        url('images/wleft.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wright.wdown.wleftdown.wleftup {
+      background-image: 
+        url('images/wright.png'),
+        url('images/wdown.png'),
+        url('images/wleftdown.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wright.wdown.wleft.wleftup {
+      background-image: 
+        url('images/wright.png'),
+        url('images/wdown.png'),
+        url('images/wleft.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wright.wleftdown.wleft.wleftup {
+      background-image: 
+        url('images/wright.png'),
+        url('images/wleftdown.png'),
+        url('images/wleft.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wrightdown.wdown.wleftdown.wleft {
+      background-image: 
+        url('images/wrightdown.png'),
+        url('images/wdown.png'),
+        url('images/wleftdown.png'),
+        url('images/wleft.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wrightdown.wdown.wleftdown.wleftup {
+      background-image: 
+        url('images/wrightdown.png'),
+        url('images/wdown.png'),
+        url('images/wleftdown.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wrightdown.wdown.wleft.wleftup {
+      background-image: 
+        url('images/wrightdown.png'),
+        url('images/wdown.png'),
+        url('images/wleft.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wrightdown.wleftdown.wleft.wleftup {
+      background-image: 
+        url('images/wrightdown.png'),
+        url('images/wleftdown.png'),
+        url('images/wleft.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wdown.wleftdown.wleft.wleftup {
+      background-image: 
+        url('images/wdown.png'),
+        url('images/wleftdown.png'),
+        url('images/wleft.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wrightup.wright.wrightdown.wdown {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wrightup.png'),
+        url('images/wright.png'),
+        url('images/wrightdown.png'),
+        url('images/wdown.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wrightup.wright.wrightdown.wleftdown {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wrightup.png'),
+        url('images/wright.png'),
+        url('images/wrightdown.png'),
+        url('images/wleftdown.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wrightup.wright.wrightdown.wleft {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wrightup.png'),
+        url('images/wright.png'),
+        url('images/wrightdown.png'),
+        url('images/wleft.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wrightup.wright.wrightdown.wleftup {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wrightup.png'),
+        url('images/wright.png'),
+        url('images/wrightdown.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wrightup.wright.wdown.wleftdown {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wrightup.png'),
+        url('images/wright.png'),
+        url('images/wdown.png'),
+        url('images/wleftdown.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wrightup.wright.wdown.wleft {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wrightup.png'),
+        url('images/wright.png'),
+        url('images/wdown.png'),
+        url('images/wleft.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wrightup.wright.wdown.wleftup {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wrightup.png'),
+        url('images/wright.png'),
+        url('images/wdown.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wrightup.wright.wleftdown.wleft {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wrightup.png'),
+        url('images/wright.png'),
+        url('images/wleftdown.png'),
+        url('images/wleft.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wrightup.wright.wleftdown.wleftup {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wrightup.png'),
+        url('images/wright.png'),
+        url('images/wleftdown.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wrightup.wright.wleft.wleftup {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wrightup.png'),
+        url('images/wright.png'),
+        url('images/wleft.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wrightup.wrightdown.wdown.wleftdown {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wrightup.png'),
+        url('images/wrightdown.png'),
+        url('images/wdown.png'),
+        url('images/wleftdown.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wrightup.wrightdown.wdown.wleft {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wrightup.png'),
+        url('images/wrightdown.png'),
+        url('images/wdown.png'),
+        url('images/wleft.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wrightup.wrightdown.wdown.wleftup {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wrightup.png'),
+        url('images/wrightdown.png'),
+        url('images/wdown.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wrightup.wrightdown.wleftdown.wleft {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wrightup.png'),
+        url('images/wrightdown.png'),
+        url('images/wleftdown.png'),
+        url('images/wleft.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wrightup.wrightdown.wleftdown.wleftup {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wrightup.png'),
+        url('images/wrightdown.png'),
+        url('images/wleftdown.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wrightup.wrightdown.wleft.wleftup {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wrightup.png'),
+        url('images/wrightdown.png'),
+        url('images/wleft.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wrightup.wdown.wleftdown.wleft {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wrightup.png'),
+        url('images/wdown.png'),
+        url('images/wleftdown.png'),
+        url('images/wleft.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wrightup.wdown.wleftdown.wleftup {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wrightup.png'),
+        url('images/wdown.png'),
+        url('images/wleftdown.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wrightup.wdown.wleft.wleftup {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wrightup.png'),
+        url('images/wdown.png'),
+        url('images/wleft.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wrightup.wleftdown.wleft.wleftup {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wrightup.png'),
+        url('images/wleftdown.png'),
+        url('images/wleft.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wright.wrightdown.wdown.wleftdown {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wright.png'),
+        url('images/wrightdown.png'),
+        url('images/wdown.png'),
+        url('images/wleftdown.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wright.wrightdown.wdown.wleft {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wright.png'),
+        url('images/wrightdown.png'),
+        url('images/wdown.png'),
+        url('images/wleft.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wright.wrightdown.wdown.wleftup {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wright.png'),
+        url('images/wrightdown.png'),
+        url('images/wdown.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wright.wrightdown.wleftdown.wleft {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wright.png'),
+        url('images/wrightdown.png'),
+        url('images/wleftdown.png'),
+        url('images/wleft.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wright.wrightdown.wleftdown.wleftup {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wright.png'),
+        url('images/wrightdown.png'),
+        url('images/wleftdown.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wright.wrightdown.wleft.wleftup {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wright.png'),
+        url('images/wrightdown.png'),
+        url('images/wleft.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wright.wdown.wleftdown.wleft {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wright.png'),
+        url('images/wdown.png'),
+        url('images/wleftdown.png'),
+        url('images/wleft.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wright.wdown.wleftdown.wleftup {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wright.png'),
+        url('images/wdown.png'),
+        url('images/wleftdown.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wright.wdown.wleft.wleftup {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wright.png'),
+        url('images/wdown.png'),
+        url('images/wleft.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wright.wleftdown.wleft.wleftup {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wright.png'),
+        url('images/wleftdown.png'),
+        url('images/wleft.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wrightdown.wdown.wleftdown.wleft {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wrightdown.png'),
+        url('images/wdown.png'),
+        url('images/wleftdown.png'),
+        url('images/wleft.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wrightdown.wdown.wleftdown.wleftup {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wrightdown.png'),
+        url('images/wdown.png'),
+        url('images/wleftdown.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wrightdown.wdown.wleft.wleftup {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wrightdown.png'),
+        url('images/wdown.png'),
+        url('images/wleft.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wrightdown.wleftdown.wleft.wleftup {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wrightdown.png'),
+        url('images/wleftdown.png'),
+        url('images/wleft.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wdown.wleftdown.wleft.wleftup {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wdown.png'),
+        url('images/wleftdown.png'),
+        url('images/wleft.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wrightup.wright.wrightdown.wdown.wleftdown {
+      background-image: 
+        url('images/wrightup.png'),
+        url('images/wright.png'),
+        url('images/wrightdown.png'),
+        url('images/wdown.png'),
+        url('images/wleftdown.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wrightup.wright.wrightdown.wdown.wleft {
+      background-image: 
+        url('images/wrightup.png'),
+        url('images/wright.png'),
+        url('images/wrightdown.png'),
+        url('images/wdown.png'),
+        url('images/wleft.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wrightup.wright.wrightdown.wdown.wleftup {
+      background-image: 
+        url('images/wrightup.png'),
+        url('images/wright.png'),
+        url('images/wrightdown.png'),
+        url('images/wdown.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wrightup.wright.wrightdown.wleftdown.wleft {
+      background-image: 
+        url('images/wrightup.png'),
+        url('images/wright.png'),
+        url('images/wrightdown.png'),
+        url('images/wleftdown.png'),
+        url('images/wleft.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wrightup.wright.wrightdown.wleftdown.wleftup {
+      background-image: 
+        url('images/wrightup.png'),
+        url('images/wright.png'),
+        url('images/wrightdown.png'),
+        url('images/wleftdown.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wrightup.wright.wrightdown.wleft.wleftup {
+      background-image: 
+        url('images/wrightup.png'),
+        url('images/wright.png'),
+        url('images/wrightdown.png'),
+        url('images/wleft.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wrightup.wright.wdown.wleftdown.wleft {
+      background-image: 
+        url('images/wrightup.png'),
+        url('images/wright.png'),
+        url('images/wdown.png'),
+        url('images/wleftdown.png'),
+        url('images/wleft.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wrightup.wright.wdown.wleftdown.wleftup {
+      background-image: 
+        url('images/wrightup.png'),
+        url('images/wright.png'),
+        url('images/wdown.png'),
+        url('images/wleftdown.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wrightup.wright.wdown.wleft.wleftup {
+      background-image: 
+        url('images/wrightup.png'),
+        url('images/wright.png'),
+        url('images/wdown.png'),
+        url('images/wleft.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wrightup.wright.wleftdown.wleft.wleftup {
+      background-image: 
+        url('images/wrightup.png'),
+        url('images/wright.png'),
+        url('images/wleftdown.png'),
+        url('images/wleft.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wrightup.wrightdown.wdown.wleftdown.wleft {
+      background-image: 
+        url('images/wrightup.png'),
+        url('images/wrightdown.png'),
+        url('images/wdown.png'),
+        url('images/wleftdown.png'),
+        url('images/wleft.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wrightup.wrightdown.wdown.wleftdown.wleftup {
+      background-image: 
+        url('images/wrightup.png'),
+        url('images/wrightdown.png'),
+        url('images/wdown.png'),
+        url('images/wleftdown.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wrightup.wrightdown.wdown.wleft.wleftup {
+      background-image: 
+        url('images/wrightup.png'),
+        url('images/wrightdown.png'),
+        url('images/wdown.png'),
+        url('images/wleft.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wrightup.wrightdown.wleftdown.wleft.wleftup {
+      background-image: 
+        url('images/wrightup.png'),
+        url('images/wrightdown.png'),
+        url('images/wleftdown.png'),
+        url('images/wleft.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wrightup.wdown.wleftdown.wleft.wleftup {
+      background-image: 
+        url('images/wrightup.png'),
+        url('images/wdown.png'),
+        url('images/wleftdown.png'),
+        url('images/wleft.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wright.wrightdown.wdown.wleftdown.wleft {
+      background-image: 
+        url('images/wright.png'),
+        url('images/wrightdown.png'),
+        url('images/wdown.png'),
+        url('images/wleftdown.png'),
+        url('images/wleft.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wright.wrightdown.wdown.wleftdown.wleftup {
+      background-image: 
+        url('images/wright.png'),
+        url('images/wrightdown.png'),
+        url('images/wdown.png'),
+        url('images/wleftdown.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wright.wrightdown.wdown.wleft.wleftup {
+      background-image: 
+        url('images/wright.png'),
+        url('images/wrightdown.png'),
+        url('images/wdown.png'),
+        url('images/wleft.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wright.wrightdown.wleftdown.wleft.wleftup {
+      background-image: 
+        url('images/wright.png'),
+        url('images/wrightdown.png'),
+        url('images/wleftdown.png'),
+        url('images/wleft.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wright.wdown.wleftdown.wleft.wleftup {
+      background-image: 
+        url('images/wright.png'),
+        url('images/wdown.png'),
+        url('images/wleftdown.png'),
+        url('images/wleft.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wrightdown.wdown.wleftdown.wleft.wleftup {
+      background-image: 
+        url('images/wrightdown.png'),
+        url('images/wdown.png'),
+        url('images/wleftdown.png'),
+        url('images/wleft.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wrightup.wright.wrightdown.wdown.wleftdown {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wrightup.png'),
+        url('images/wright.png'),
+        url('images/wrightdown.png'),
+        url('images/wdown.png'),
+        url('images/wleftdown.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wrightup.wright.wrightdown.wdown.wleft {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wrightup.png'),
+        url('images/wright.png'),
+        url('images/wrightdown.png'),
+        url('images/wdown.png'),
+        url('images/wleft.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wrightup.wright.wrightdown.wdown.wleftup {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wrightup.png'),
+        url('images/wright.png'),
+        url('images/wrightdown.png'),
+        url('images/wdown.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wrightup.wright.wrightdown.wleftdown.wleft {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wrightup.png'),
+        url('images/wright.png'),
+        url('images/wrightdown.png'),
+        url('images/wleftdown.png'),
+        url('images/wleft.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wrightup.wright.wrightdown.wleftdown.wleftup {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wrightup.png'),
+        url('images/wright.png'),
+        url('images/wrightdown.png'),
+        url('images/wleftdown.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wrightup.wright.wrightdown.wleft.wleftup {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wrightup.png'),
+        url('images/wright.png'),
+        url('images/wrightdown.png'),
+        url('images/wleft.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wrightup.wright.wdown.wleftdown.wleft {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wrightup.png'),
+        url('images/wright.png'),
+        url('images/wdown.png'),
+        url('images/wleftdown.png'),
+        url('images/wleft.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wrightup.wright.wdown.wleftdown.wleftup {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wrightup.png'),
+        url('images/wright.png'),
+        url('images/wdown.png'),
+        url('images/wleftdown.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wrightup.wright.wdown.wleft.wleftup {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wrightup.png'),
+        url('images/wright.png'),
+        url('images/wdown.png'),
+        url('images/wleft.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wrightup.wright.wleftdown.wleft.wleftup {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wrightup.png'),
+        url('images/wright.png'),
+        url('images/wleftdown.png'),
+        url('images/wleft.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wrightup.wrightdown.wdown.wleftdown.wleft {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wrightup.png'),
+        url('images/wrightdown.png'),
+        url('images/wdown.png'),
+        url('images/wleftdown.png'),
+        url('images/wleft.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wrightup.wrightdown.wdown.wleftdown.wleftup {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wrightup.png'),
+        url('images/wrightdown.png'),
+        url('images/wdown.png'),
+        url('images/wleftdown.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wrightup.wrightdown.wdown.wleft.wleftup {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wrightup.png'),
+        url('images/wrightdown.png'),
+        url('images/wdown.png'),
+        url('images/wleft.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wrightup.wrightdown.wleftdown.wleft.wleftup {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wrightup.png'),
+        url('images/wrightdown.png'),
+        url('images/wleftdown.png'),
+        url('images/wleft.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wrightup.wdown.wleftdown.wleft.wleftup {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wrightup.png'),
+        url('images/wdown.png'),
+        url('images/wleftdown.png'),
+        url('images/wleft.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wright.wrightdown.wdown.wleftdown.wleft {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wright.png'),
+        url('images/wrightdown.png'),
+        url('images/wdown.png'),
+        url('images/wleftdown.png'),
+        url('images/wleft.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wright.wrightdown.wdown.wleftdown.wleftup {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wright.png'),
+        url('images/wrightdown.png'),
+        url('images/wdown.png'),
+        url('images/wleftdown.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wright.wrightdown.wdown.wleft.wleftup {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wright.png'),
+        url('images/wrightdown.png'),
+        url('images/wdown.png'),
+        url('images/wleft.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wright.wrightdown.wleftdown.wleft.wleftup {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wright.png'),
+        url('images/wrightdown.png'),
+        url('images/wleftdown.png'),
+        url('images/wleft.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wright.wdown.wleftdown.wleft.wleftup {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wright.png'),
+        url('images/wdown.png'),
+        url('images/wleftdown.png'),
+        url('images/wleft.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wrightdown.wdown.wleftdown.wleft.wleftup {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wrightdown.png'),
+        url('images/wdown.png'),
+        url('images/wleftdown.png'),
+        url('images/wleft.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wrightup.wright.wrightdown.wdown.wleftdown.wleft {
+      background-image: 
+        url('images/wrightup.png'),
+        url('images/wright.png'),
+        url('images/wrightdown.png'),
+        url('images/wdown.png'),
+        url('images/wleftdown.png'),
+        url('images/wleft.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wrightup.wright.wrightdown.wdown.wleftdown.wleftup {
+      background-image: 
+        url('images/wrightup.png'),
+        url('images/wright.png'),
+        url('images/wrightdown.png'),
+        url('images/wdown.png'),
+        url('images/wleftdown.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wrightup.wright.wrightdown.wdown.wleft.wleftup {
+      background-image: 
+        url('images/wrightup.png'),
+        url('images/wright.png'),
+        url('images/wrightdown.png'),
+        url('images/wdown.png'),
+        url('images/wleft.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wrightup.wright.wrightdown.wleftdown.wleft.wleftup {
+      background-image: 
+        url('images/wrightup.png'),
+        url('images/wright.png'),
+        url('images/wrightdown.png'),
+        url('images/wleftdown.png'),
+        url('images/wleft.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wrightup.wright.wdown.wleftdown.wleft.wleftup {
+      background-image: 
+        url('images/wrightup.png'),
+        url('images/wright.png'),
+        url('images/wdown.png'),
+        url('images/wleftdown.png'),
+        url('images/wleft.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wrightup.wrightdown.wdown.wleftdown.wleft.wleftup {
+      background-image: 
+        url('images/wrightup.png'),
+        url('images/wrightdown.png'),
+        url('images/wdown.png'),
+        url('images/wleftdown.png'),
+        url('images/wleft.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wright.wrightdown.wdown.wleftdown.wleft.wleftup {
+      background-image: 
+        url('images/wright.png'),
+        url('images/wrightdown.png'),
+        url('images/wdown.png'),
+        url('images/wleftdown.png'),
+        url('images/wleft.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wrightup.wright.wrightdown.wdown.wleftdown.wleft {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wrightup.png'),
+        url('images/wright.png'),
+        url('images/wrightdown.png'),
+        url('images/wdown.png'),
+        url('images/wleftdown.png'),
+        url('images/wleft.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wrightup.wright.wrightdown.wdown.wleftdown.wleftup {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wrightup.png'),
+        url('images/wright.png'),
+        url('images/wrightdown.png'),
+        url('images/wdown.png'),
+        url('images/wleftdown.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wrightup.wright.wrightdown.wdown.wleft.wleftup {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wrightup.png'),
+        url('images/wright.png'),
+        url('images/wrightdown.png'),
+        url('images/wdown.png'),
+        url('images/wleft.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wrightup.wright.wrightdown.wleftdown.wleft.wleftup {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wrightup.png'),
+        url('images/wright.png'),
+        url('images/wrightdown.png'),
+        url('images/wleftdown.png'),
+        url('images/wleft.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wrightup.wright.wdown.wleftdown.wleft.wleftup {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wrightup.png'),
+        url('images/wright.png'),
+        url('images/wdown.png'),
+        url('images/wleftdown.png'),
+        url('images/wleft.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wrightup.wrightdown.wdown.wleftdown.wleft.wleftup {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wrightup.png'),
+        url('images/wrightdown.png'),
+        url('images/wdown.png'),
+        url('images/wleftdown.png'),
+        url('images/wleft.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wright.wrightdown.wdown.wleftdown.wleft.wleftup {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wright.png'),
+        url('images/wrightdown.png'),
+        url('images/wdown.png'),
+        url('images/wleftdown.png'),
+        url('images/wleft.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wrightup.wright.wrightdown.wdown.wleftdown.wleft.wleftup {
+      background-image: 
+        url('images/wrightup.png'),
+        url('images/wright.png'),
+        url('images/wrightdown.png'),
+        url('images/wdown.png'),
+        url('images/wleftdown.png'),
+        url('images/wleft.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+
+    .o.wup.wrightup.wright.wrightdown.wdown.wleftdown.wleft.wleftup {
+      background-image: 
+        url('images/wup.png'),
+        url('images/wrightup.png'),
+        url('images/wright.png'),
+        url('images/wrightdown.png'),
+        url('images/wdown.png'),
+        url('images/wleftdown.png'),
+        url('images/wleft.png'),
+        url('images/wleftup.png'),
+        url('images/Stone%20Block.png');
+    }
+

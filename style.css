@@ -28,44 +28,14 @@
   /* Comme les images ont une zone transparente en haut,
      background-position permet de les décaler
   */
-  background-position: 0px -22px;
+  background-position: 0px 0px;
   background-repeat: no-repeat;
   -webkit-transform: translate3d(0px,-18px,0px);
 }
 
-.o.wallup::before {
-  content: url('images/Shadow%20North.png');
-  position: absolute;
-  top: -25px;
-}
-
-.o.walldown::after {
-  content: url('images/Shadow%20South.png');
-  position: absolute;
-  top: -22px;
-}
-
-.w.openleft::before {
-  content: url('images/Shadow%20East.png');
-  position: absolute;
-  left: -51px;
-  top: -7px;
-}
-
-.w.openright::after {
-  content: url('images/Shadow%20West.png');
-  position: absolute;
-  left: 50px;
-  top: -7px;
-}
-
-.w.openleft::before::before {
-  content: "LOL";
-}
-
 .o {
   background-image: url('images/Stone%20Block.png');
-  background-position: 0px -24px;
+  background-position: 0px 0px;
   background-repeat: no-repeat;
 }
 

@@ -10,12 +10,12 @@ App.sprites = {
 App.map.draw = function() {}
 
 App.map.positionElement = function($el, x, y) {
-  var defaults = { top: 40, left: 50, tdiff: 0, ldiff: 0 };
+  var defaults = { top: 40, left: 50, tdiff: -20, ldiff: 0 };
   var vals = _.extend({},defaults,App.sprites[$el.attr('sprite-type')]);
 
   $el.css({
     top: (y*vals.top)+vals.tdiff+"px",
-    left: (x*vals.left)-vals.ldiff+"px",
+    left: (x*vals.left)+vals.ldiff+"px",
     zIndex: y
   });
 
@@ -68,26 +68,44 @@ App.map.initialize = function(map) {
       var vals = _.extend({},defaults,App.sprites[tile]);
 
       t.css({
-        top: y*vals.top + vals.tdiff,
+        top: y*vals.top - 40 + vals.tdiff,
         left: x*vals.left + vals.ldiff,
         backgroundPositionY: vals.backgroundPositionY,
         zIndex: y + (tile == "w" ? 1 : 0)
       });
 
-      if (tile == "o" && map[y-1] && map[y-1][x] == "w") {
-        t.addClass('wallup');
-      }
+      if (tile == "o") {
+        if (map[y-1] && map[y-1][x] == "w") {
+          t.addClass('wup');
+        }
 
-      if (tile == "o" && map[y+1] && map[y+1][x] == "w") {
-        t.addClass('walldown');
-      }
+        if (map[y-1] && map[y-1][x+1] == "w" && map[y][x+1] == "o" && map[y-1][x] == "o") {
+          t.addClass('wrightup');
+        }
 
-      if (tile == "w" && map[y][x+1] == "o") {
-        t.addClass('openright');
-      }
+        if (map[y][x+1] == "w") {
+          t.addClass('wright');
+        }
 
-      if (tile == "w" && map[y][x-1] == "o") {
-        t.addClass('openleft');
+        if (map[y+1] && map[y+1][x+1] == "w" && map[y][x+1] == "o") {
+          t.addClass('wrightdown');
+        }
+
+        if (map[y+1] && map[y+1][x] == "w") {
+          t.addClass('wdown');
+        }
+
+        if (map[y+1] && map[y+1][x-1] == "w" && map[y][x-1] == "o") {
+          t.addClass('wleftdown');
+        }
+
+        if (map[y][x-1] == "w") {
+          t.addClass('wleft');
+        }
+
+        if (map[y-1] && map[y-1][x-1] == "w" && map[y][x-1] == "o" && map[y-1][x] == "o") {
+          t.addClass('wleftup');
+        }
       }
 
       // append ajoute un élément en dernier fils d'un noeud.
