@@ -16,6 +16,7 @@ App.map.positionElement = function($el, x, y) {
   $el.css({
     top: (y*vals.top)+vals.tdiff+"px",
     left: (x*vals.left)-vals.ldiff+"px",
+    zIndex: y
   });
 
 };
@@ -69,8 +70,25 @@ App.map.initialize = function(map) {
       t.css({
         top: y*vals.top + vals.tdiff,
         left: x*vals.left + vals.ldiff,
-        backgroundPositionY: vals.backgroundPositionY
+        backgroundPositionY: vals.backgroundPositionY,
+        zIndex: y + (tile == "w" ? 1 : 0)
       });
+
+      if (tile == "o" && map[y-1] && map[y-1][x] == "w") {
+        t.addClass('wallup');
+      }
+
+      if (tile == "o" && map[y+1] && map[y+1][x] == "w") {
+        t.addClass('walldown');
+      }
+
+      if (tile == "w" && map[y][x+1] == "o") {
+        t.addClass('openright');
+      }
+
+      if (tile == "w" && map[y][x-1] == "o") {
+        t.addClass('openleft');
+      }
 
       // append ajoute un élément en dernier fils d'un noeud.
       $('#map').append(t);
