@@ -77,7 +77,7 @@ function get_game($game_id) {
 }
 
 function update_game($game_id, $instances) {
-
+  $conn = connect();
   $update_instance = $conn->prepare(<<<SQL
   INSERT INTO instance (game_id, instance_id, type, attributes) 
                 VALUES (:game_id,:instance_id,:type,:attributes)
@@ -89,7 +89,9 @@ function update_game($game_id, $instances) {
 SQL
   );
 
-  $conn = connect();
+  $remove_old_instances = $conn->prepare("DELETE FROM instance WHERE game_id = :game_id");
+  $remove_old_instances->execute(array("game_id" => $game_id));
+
   foreach ($instances as $instance) {
     if (is_array($instance['attributes'])) {
       $attributes = json_encode($instance['attributes'], JSON_NUMERIC_CHECK);
