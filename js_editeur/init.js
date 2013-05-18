@@ -14,7 +14,11 @@ $(function() {
 	var t = $('<div class="tt '+tile.id+'" id="'+tile.id+'"></div>');
 	$('#tiles').append(t);
     });
+
+    App.map.positionElement($("#initpos"),"0","0");
+
   App.control.initialize();
+
 
 
 

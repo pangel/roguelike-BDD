@@ -1,4 +1,13 @@
 App.currentTile = 'o';
+/*
+  0 -> tiles
+  1 -> initial position
+  2 -> creatures
+*/
+App.selectedMode = 0;
+App.initPosX = 0;
+App.initPosY = 0;
+
 App.tiles = [
     {id: 'o', name: 'floor'},
     {id: 'w', name: 'wall'}
@@ -19,8 +28,19 @@ App.control = {
     },
     
     drawRec: function(a,b,x,y){
+
+	Array.prototype.clone = function() {
+	    var newArray = (this instanceof Array) ? [] : {};
+	    for (i in this) {
+		if (i == 'clone') continue;
+		if (this[i] && typeof this[i] == "object") {
+		    newArray[i] = this[i].clone();
+		} else newArray[i] = this[i]
+	    } return newArray;
+	}
+
 	console.log('1');
-	App.control.mapbis = jQuery.extend(true, {}, App.map.map);
+	App.control.mapbis = App.map.map.clone();
 	for (var i = Math.min(a,x); i <= Math.max(a,x); i++){
 	    for (var j = Math.min(b,y); j <= Math.max(b,y); j++){
 		App.control.mapbis[j][i] = App.currentTile;
@@ -47,49 +67,96 @@ App.control = {
 	};
 
 
+	//Envoie de la map sur le serveur
+	$(document).ready(function(){
+	    $("#map_send").click(function() {
+		var map_json = "";
+		for (var i=0; i < App.map.map.length; i++){
+		    for (var j=0; j < App.map.map[0].length; j++){
+			map_json = map_json + App.map.map[i][j];
+		    }
+		    map_json = map_json + '\n\r';
+		}
+		$("#map_json").val(map_json);
+		$("#initposx_json").val(App.initPosX);
+		$("#initposy_json").val(App.initPosY);
+		$("#sendmap").submit();
+	    });
+	});
+	
+
+
 	//Ajout de rectangle de tiles à la souris
 	$(document).ready(function(){
 	    $('#map').on('mousedown',"div.t",function(){
-		var tab = $(this).attr('id').match('([0-9]+)_([0-9]+)');
-		if(!tab[2]){alert("Error number 789");};
-		if(App.control.mouseDown == 0){
-		    App.control.mouseDownX = tab[1];
-		    App.control.mouseDownY = tab[2];
-		    App.control.mouseDown = 1;
-		}
-		App.control.drawRec(App.control.mouseDownX,App.control.mouseDownY,tab[1],tab[2]);
-	    });
-	});
-
-	$(document).ready(function(){
-	    $('#map').on('mouseenter',"div.t",function(){
-		var tab = $(this).attr('id').match('([0-9]+)_([0-9]+)');
-		if(!tab[2]){alert("Error number 789");};
-		if (App.control.mouseDown == 1){
+		if (App.selectedMode == 0){
+		    var tab = $(this).attr('id').match('([0-9]+)_([0-9]+)');
+		    if(!tab[2]){alert("Error number 789");};
+		    if(App.control.mouseDown == 0){
+			App.control.mouseDownX = tab[1];
+			App.control.mouseDownY = tab[2];
+			App.control.mouseDown = 1;
+		    }
 		    App.control.drawRec(App.control.mouseDownX,App.control.mouseDownY,tab[1],tab[2]);
 		}
 	    });
 	});
 
 	$(document).ready(function(){
-	    $('#map').on('mouseup',"div.t",function(){
-		var tab = $(this).attr('id').match('([0-9]+)_([0-9]+)');
-		if(!tab[2]){alert("Error number 789");};
-		if (App.control.mouseDown == 1){
-		    App.control.mouseDown = 0;
-		    App.map.map = App.control.mapbis;
+	    $('#map').on('mouseenter',"div.t",function(){
+		if (App.selectedMode == 0){
+		    var tab = $(this).attr('id').match('([0-9]+)_([0-9]+)');
+		    if(!tab[2]){alert("Error number 789");};
+		    if (App.control.mouseDown == 1){
+			App.control.drawRec(App.control.mouseDownX,App.control.mouseDownY,tab[1],tab[2]);
+		    }
 		}
 	    });
 	});
 
+	$(document).ready(function(){
+	    $('#map').on('mouseup',"div.t",function(){
+		if (App.selectedMode == 0){
+		    var tab = $(this).attr('id').match('([0-9]+)_([0-9]+)');
+		    if(!tab[2]){alert("Error number 789");};
+		    if (App.control.mouseDown == 1){
+			App.control.mouseDown = 0;
+			App.map.map = App.control.mapbis;
+		    }
+		}
+	    });
+	});
+
+	//Selection de la position initialle
+	$(document).ready(function(){
+	    $('#map').on('click',"div.t",function(){
+		if (App.selectedMode == 1){
+		    var tab = $(this).attr('id').match('([0-9]+)_([0-9]+)');
+		    if(!tab[2]){alert("Error number 789");};
+		    App.map.positionElement($("#initpos"),tab[1],tab[2]);
+		    App.initPosX = tab[1];
+		    App.initPosY = tab[2];
+		}
+	    });
+	});
 
 	//Selection de la tile
 	$(document).ready(function(){
 	    $('#rightpanel').on('click',"div.tt",function(){
 		var tab = $(this).attr('id');
 		App.currentTile = tab;
+		App.selectedMode = 0;
 	    });
 	});
+
+
+	//Selection de initPos
+	$(document).ready(function(){
+	    $('#rightpanel').on('click',"#initpossel",function(){
+		App.selectedMode = 1;
+	    });
+	});
+
 
 	//Ajout de colonne et de ligne à la map
 	$(document).ready(function(){
