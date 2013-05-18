@@ -60,7 +60,6 @@ App.step = function() {
       }
   });
   App.instances = _.compact(App.instances);
-
   App.drawStatus();
   App.sendGame(App.dump());
 };

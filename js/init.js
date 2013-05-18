@@ -5,8 +5,9 @@ $(function() {
   if (Bootstrap.game) {
 
     var tiles = _.map(Bootstrap.game.map.tiles.split('\n'), function(s) {
-      return s.split('')
+      return _.map(s.split(''), function(e) { return e == "\r" ? false : e; })
     });
+    tiles.pop();
 
     _.each(Bootstrap.game.instances, function(el) {
       el.attributes = JSON.parse(el.attributes);

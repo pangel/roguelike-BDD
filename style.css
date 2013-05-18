@@ -14,9 +14,11 @@
      positionné en coordonnées absolues grâce aux propriétés
      top et left (qui sont modifiées plus tard). [1]
   */
-  position: absolute;
+  position: relative;
+  display: inline-block;
   width: 50px;
   height: 85px;
+  margin-top: -50px;
   /* Les images des tiles font 100px par 170px
      background-size les remet à la bonne échelle
   */
@@ -37,6 +39,23 @@
   background-image: url('images/Stone%20Block.png');
   background-position: 0px 0px;
   background-repeat: no-repeat;
+}
+
+/* Map borders */
+.w.bup, .o.bup {
+  box-shadow: 0px -17px 29px -19px;
+}
+
+.w.bright, .o.bright {
+  box-shadow: 17px 0px 29px -19px;
+}
+
+.w.bdown, .o.bdown {
+  box-shadow: 0px 17px 29px -19px;
+}
+
+.w.bleft, .o.bleft {
+  box-shadow: -17px 0px 29px -19px;
 }
 
 .creature {
@@ -75,8 +94,15 @@
   border: 1px solid rgba(255, 255, 0, 0.4);
 }
 
+#board {
+  position: relative;
+  margin-top: 90px;
+  margin-left: 40px;
+}
+
 #map {
   position: relative;
+  white-space: nowrap;
 }
 
 #elements {
