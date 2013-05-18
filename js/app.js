@@ -34,9 +34,8 @@ App.setStatus = function(str) {
 App.drawStatus = function() {
   var $s = $("#status");
   $s.children().last().addClass('bottom');
-  while(this.status.length > 0) {
-    $s.append('<div>'+this.status.shift()+'</div>');
-  }
+  $('<div>'+this.status.join('<br>')+'</div>').hide().appendTo($s).show("slide",{direction: "down"}, 300);
+  this.status = [];
   $s.scrollTop($s[0].scrollHeight)
 }
 

@@ -1,7 +1,32 @@
 App.map = {};
 App.sprites = {};
 
-App.map.draw = function() {}
+App.map.draw = function() {
+  var o = App.player.$el.offset();
+  var dh = $(window).width() - o.left;
+  var dv = $(window).height() - o.top;
+  var property, sign;
+  if (dv > 0 && dv < 80) {
+    property = "top"; sign = "-";
+  } else if (o.top < 80) {
+    property = "top"; sign = "+";
+  } else if (o.left < 80) {
+    property = "left"; sign = "+";
+  } else if (dh > 0 && dh < 80) {
+    property = "left"; sign = "-";
+  }
+  if (property && sign) {
+    $("#board").css('margin-'+property,''+sign+'=160px');
+  }
+  if (dv < 0) {
+    $("#board").css('margin-top','-='+(-dv+80)+'px');
+  }
+
+  if (dh < 0) {
+    $("#board").css('margin-left','-='+(-dh+80)+'px');
+  }
+
+}
 
 App.map.positionElement = function($el, x, y) {
   var defaults = { top: 40, left: 50, tdiff: -40, ldiff: 0 };
@@ -35,6 +60,7 @@ App.map.getTouching = function(x,y) {
 App.map.initialize = function(map) {
   this.data = map;
   var defaults = { top: 40, left: 50, tdiff: 0, ldiff: 0 };
+  _.defer(function() { $('body').addClass('up'); });
 
   // Build the map
   _.each(map, function(line, y) {
@@ -61,7 +87,7 @@ App.map.initialize = function(map) {
       _.each(more, function(maybe, c) { t.toggleClass(c,maybe); });
 
       if (tile == "o") {
-        var more = {
+        var shadows = {
           wup:        map[y-1] && map[y-1][x] == "w",
           wrightup:   map[y-1] && map[y-1][x+1] == "w" && map[y][x+1] == "o" && map[y-1][x] == "o",
           wright:     map[y][x+1] == "w",
@@ -72,8 +98,8 @@ App.map.initialize = function(map) {
           wleftup:    map[y-1] && map[y-1][x-1] == "w" && map[y][x-1] == "o" && map[y-1][x] == "o"
         };
 
-        _.each(more, function(maybe, c) { t.toggleClass(c,maybe); });
-
+        var shadowClass = _.chain(shadows).map(function(maybe, c) { return maybe && c; }).compact().value().join('-')
+        t.addClass(shadowClass);
       }
 
       // append ajoute un élément en dernier fils d'un noeud.

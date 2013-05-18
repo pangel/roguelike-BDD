@@ -17,12 +17,15 @@ $(function() {
     App.control.initialize();
     App.map.initialize(tiles);
 
-    App.map.draw();
 
     App.initializeInstances(Bootstrap.game.instances);
     App.player = _.find(App.instances, function(el) { return el.type === "player"; });
+
     _.each(App.instances, function(instance) {
       instance.draw();
     });
+
+    App.map.draw();
+
   }
 });

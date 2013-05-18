@@ -1,4 +1,7 @@
-
+body {
+  overflow: hidden;
+  background-image: url('images/bg.jpg');
+}
 /* Le CSS modifie l'apparence des éléments HTML. */
 /* p { STYLE } == appliquer STYLE à tous les élément <p>...</p> */
 /* .ha { STYLE } == appliquer STYLE à tous les éléments <[elem] class="ha">... */
@@ -32,6 +35,11 @@
   */
   background-position: 0px 0px;
   background-repeat: no-repeat;
+  -webkit-transition: -webkit-transform 0.8s ease-out;
+  -webkit-transform: translate3d(0px,20px,0px);
+}
+
+body.up .w {
   -webkit-transform: translate3d(0px,-18px,0px);
 }
 
@@ -98,6 +106,7 @@
   position: relative;
   margin-top: 90px;
   margin-left: 40px;
+  -webkit-transition: margin 0.25s ease-in;
 }
 
 #map {
@@ -114,14 +123,21 @@
 }
 
 #status {
-  width: 80%;
-  margin: 50px auto;
-  /*border: 1px solid black;*/
+  margin: 0;
   text-align: center;
   font-size: 0.84em;
   line-height: 1.2;
   overflow: auto;
   max-height: 250px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: hsla(0, 100%, 100%, 0.8);
+  border-radius: 3px;
+  z-index: 10;
+  width: 25em;
+  padding: 0.8em;
+  -webkit-transition: height 0.3s ease-out;
 }
 
 #status .old {

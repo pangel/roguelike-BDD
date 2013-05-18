@@ -33,6 +33,7 @@ try {
     <!-- jQuery et d'autres librairies unifient les noms de fonctions et les comportements.-->
     <!-- jQuery ajoute l'objet global $ dans l'environnement. $ est aussi une fonction.-->
     <script src="js/lib/jquery.js"></script>
+    <script src="js/lib/jquery-ui-1.10.3.custom.min.js"></script>
     <!-- underscore est une librairie qui ajoute des méthodes de programmation fonctionnelle courante-->
     <!-- (each, map, fold, etc.)-->
     <!-- underscore ajoute l'objet global _. _ est aussi une fonction.-->
