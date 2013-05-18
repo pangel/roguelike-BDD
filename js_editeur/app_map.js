@@ -20,6 +20,7 @@ App.map.positionElement = function($el, x, y) {
     top: (y*this.tileShiftY)+"px",
     left: (x*this.tileShiftX)+"px"
   });
+    console.log(""+x +" "+y);
 };
 
 App.map.initialize = function(map) {

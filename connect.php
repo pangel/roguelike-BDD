@@ -17,7 +17,22 @@ function connect() {
 }
 
 function add_player() {
+  $conn = connect();
   $conn->query("INSERT INTO player (name) VALUES ('JoueurX')");
+  return $conn->lastInsertId();
+}
+
+function add_map($name, $tiles, $initPosX, $initPosY) {
+  $conn = connect();
+  $add_map = $conn->prepare("INSERT INTO map (name,tiles) VALUES (:name, :tiles)");
+  $add_map->execute(array("name" => $name, "tiles" => $tiles));
+
+  $get_map_id = $conn->prepare("SELECT map.id FROM map WHERE map.name = :name");
+  $get_map_id->execute(array("name" => $name));
+  $map_id = $get_map_id->fetch(PDO::FETCH_ASSOC);
+  
+echo 'INSERT INTO map_content (map_id, type, startX, startY, attributes) VALUES ('.$map_id['id'].', player, '.$initPosX.', '.$initPosY.', {\"x\":'.$initPosX.',\"y\":'.$initPosY.'})';
+  $conn->query('INSERT INTO map_content (map_id, type, startX, startY, attributes) VALUES ('.$map_id['id'].', "player", '.$initPosX.', '.$initPosY.', "{\"x\":'.$initPosX.',\"y\":'.$initPosY.'}")');
   return $conn->lastInsertId();
 }
 

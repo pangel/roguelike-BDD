@@ -15,7 +15,7 @@
   ],
   add: [ 
     {
-      type: (monster|object),
+      type: (monster : 0|object : 1),
       id_model: 1239,
       id_instance: (player_id * 10^5) + counter
       x: 0,

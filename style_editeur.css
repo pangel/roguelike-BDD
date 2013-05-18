@@ -50,12 +50,31 @@ body {
      background-size les remet à la bonne échelle
   */
   background-size: 100%;
+  z-index: 1;
 }
 
 .tt {
   width: 50px;
   height: 85px;
   background-size: 100%;
+}
+
+#initpos {
+  position: absolute;
+  width: 50px;
+  height: 85px;
+  background-size: 100%;
+  background-image: url('images/croix.png');
+  background-repeat: no-repeat;
+  z-index: 2;
+}
+
+#initpossel {
+  width: 50px;
+  height: 85px;
+  background-size: 100%;
+  background-image: url('images/croix.png');
+  background-repeat: no-repeat;
 }
 
 .e {
