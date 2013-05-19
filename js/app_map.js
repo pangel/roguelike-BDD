@@ -60,6 +60,7 @@ App.map.getTouching = function(x,y) {
 App.map.initialize = function(map) {
   this.data = map;
   var defaults = { top: 40, left: 50, tdiff: 0, ldiff: 0 };
+
   _.defer(function() { $('body').addClass('up'); });
 
   // Build the map
@@ -78,6 +79,13 @@ App.map.initialize = function(map) {
         backgroundPositionY: vals.backgroundPositionY,
         zIndex: y + (tile == "w" ? 1 : 0)
       });
+
+      // Classe aléatoire pour la montée des murs
+      if (tile == "w") {
+        t.css('transitionDuration', "" + (0.2 + Math.random() * 1) +"s");
+        t.css('transitionDelay', "" + Math.random()  * 0.1 +"s");
+        t.css('transitionTimingFunction', (Math.random() < 0.5 ? "ease-in" : "ease-out"));
+      }
 
       var more = {
         bright: y!=0 && !map[y][x+1],
