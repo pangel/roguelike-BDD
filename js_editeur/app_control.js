@@ -1,4 +1,6 @@
 App.currentTile = 'o';
+App.currentMob = 'spider';
+
 /*
   0 -> tiles
   1 -> initial position
@@ -7,6 +9,8 @@ App.currentTile = 'o';
 App.selectedMode = 0;
 App.initPosX = 0;
 App.initPosY = 0;
+
+App.mobs = [];
 
 App.tiles = [
     {id: 'o', name: 'floor'},
@@ -140,6 +144,23 @@ App.control = {
 	    });
 	});
 
+	//Ajout d'un mob
+	$(document).ready(function(){
+	    $('#map').on('click',"div.t",function(){
+		if (App.selectedMode == 2){
+		    var tab = $(this).attr('id').match('([0-9]+)_([0-9]+)');
+		    if(!tab[2]){alert("Error number 789");};
+		    console.log("aaaaa");
+
+		    var t = $('<div class="element creature '+App.currentMob+'"></div>');
+		    t.css({top: tab[2]*App.map.tileShiftY, left: tab[1]*App.map.tileShiftX});
+		    $("#map").append(t);
+
+		    App.mobs[App.mobs.length] = {'type': App.currentMob, 'x': tab[1], 'y': tab[2]};
+		}
+	    });
+	});
+
 	//Selection de la tile
 	$(document).ready(function(){
 	    $('#rightpanel').on('click',"div.tt",function(){
@@ -154,6 +175,14 @@ App.control = {
 	$(document).ready(function(){
 	    $('#rightpanel').on('click',"#initpossel",function(){
 		App.selectedMode = 1;
+	    });
+	});
+
+	//Selection du mob
+	$(document).ready(function(){
+	    $('#rightpanel').on('click',"div.mob",function(){
+		App.selectedMode = 2;
+		App.currentMob = $(this).attr('id');
 	    });
 	});
 

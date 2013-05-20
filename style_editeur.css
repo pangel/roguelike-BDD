@@ -19,6 +19,7 @@ body {
     border: 2px solid black;
     float: right;
     width:19%;
+    position: relative;
 }
 
 #addrowcolumn {
@@ -60,6 +61,7 @@ body {
 }
 
 #initpos {
+  pointer-events: none;
   position: absolute;
   width: 50px;
   height: 85px;
@@ -101,12 +103,17 @@ body {
 }
 
 .creature {
-  position: absolute;
   /* Arrondi des angles. Avec un arrondi assez grand
      on peut dessiner un cercle.
   */
   /* Le z-index est la position en profondeur (coordonnée z) [2] */
-  z-index: 1;
+  z-index: 5;
+  position: absolute;
+  background-repeat: no-repeat;
+}
+
+.mob {
+  z-index: 5;
   background-repeat: no-repeat;
 }
 

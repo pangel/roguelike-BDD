@@ -34,6 +34,10 @@ require ('connect.php');
     </div><br>
     <div id="initpossel">
     </div>
+    <div id="mobs">
+	<div class="mob spider" id="spider">
+	</div>
+    </div>
     <form id="sendmap" action="add_map.php" method="post">
         <input type="hidden" name ="map_json" id="map_json">
         <input type="hidden" name ="initposy_json" id="initposy_json">

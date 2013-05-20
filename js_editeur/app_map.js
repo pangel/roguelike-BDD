@@ -58,9 +58,7 @@ App.map.printMap = function(map) {
 
   _.each(map, function(line, y) {
     _.each(line, function(tile, x) {
-	var t = $('<div class="t '+tile+'" id='+x+"_"+y+'></div>');
-	t.css({top: y*self.tileShiftY, left: x*self.tileShiftX});
-	$("#"+x+"_"+y).replaceWith(t);
+	$("#"+x+"_"+y).attr("class", "t "+tile);
     });
   });
 };
