@@ -75,7 +75,7 @@ App.control = {
 		    for (var j=0; j < App.map.map[0].length; j++){
 			map_json = map_json + App.map.map[i][j];
 		    }
-		    map_json = map_json + '\n\r';
+		    map_json = map_json + '\r\n';
 		}
 		$("#map_json").val(map_json);
 		$("#initposx_json").val(App.initPosX);

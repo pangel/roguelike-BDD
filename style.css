@@ -1,6 +1,6 @@
 body {
   overflow: hidden;
-  /*background-image: url('images/bg.jpg');*/
+  background-image: url('images/bg.jpg');
 }
 /* Le CSS modifie l'apparence des éléments HTML. */
 /* p { STYLE } == appliquer STYLE à tous les élément <p>...</p> */
@@ -35,8 +35,8 @@ body {
   */
   background-position: 0px 0px;
   background-repeat: no-repeat;
-  -webkit-transition-property: -webkit-transform 0.8s ease-out;
-  -webkit-transform: translate3d(0px,0px,0px);
+  -webkit-transition: -webkit-transform 0.8s ease-out;
+  -webkit-transform: translate3d(0px,20px,0px);
 }
 
 body.up .w {
@@ -106,9 +106,6 @@ body.up .w {
   position: relative;
   margin-top: 90px;
   margin-left: 40px;
-}
-
-body.up #board {
   -webkit-transition: margin 0.25s ease-in;
 }
 
