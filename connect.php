@@ -39,7 +39,7 @@ function add_map($name, $tiles, $initPosX, $initPosY,$mobs) {
   var_dump($json[0]['attributes']);
   for ($i = 0; $i < count($json); $i++){
 	//echo 'INSERT INTO map_content (map_id, type, attributes) VALUES ('.$map_id['id'].', "'.$json[$i]['type'].', "{\"x\":'.$json[$i]['attributes']['x'].',\"y\":'.$json[$i]['attributes']['x'].'}")';
-	  $conn->query('INSERT INTO map_content (map_id, type, attributes) VALUES ('.$map_id['id'].', "'.$json[$i]['type'].'", "{\"x\":'.$json[$i]['attributes']['x'].',\"y\":'.$json[$i]['attributes']['x'].'}")');
+	  $conn->query('INSERT INTO map_content (map_id, type, attributes) VALUES ('.$map_id['id'].', "'.$json[$i]['type'].'", "{\"x\":'.$json[$i]['attributes']['x'].',\"y\":'.$json[$i]['attributes']['y'].'}")');
   }
 
   return $conn->lastInsertId();
