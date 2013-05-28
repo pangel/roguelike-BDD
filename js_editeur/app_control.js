@@ -84,6 +84,7 @@ App.control = {
 		$("#map_json").val(map_json);
 		$("#initposx_json").val(App.initPosX);
 		$("#initposy_json").val(App.initPosY);
+		$("#mobs_json").val(JSON.stringify(App.mobs));
 		$("#sendmap").submit();
 	    });
 	});
@@ -156,7 +157,7 @@ App.control = {
 		    t.css({top: tab[2]*App.map.tileShiftY, left: tab[1]*App.map.tileShiftX});
 		    $("#map").append(t);
 
-		    App.mobs[App.mobs.length] = {'type': App.currentMob, 'x': tab[1], 'y': tab[2]};
+		    App.mobs[App.mobs.length] = {'type': App.currentMob, 'attributes': {'x': tab[1], 'y': tab[2]}};
 		}
 	    });
 	});

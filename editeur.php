@@ -42,6 +42,7 @@ require ('connect.php');
         <input type="hidden" name ="map_json" id="map_json">
         <input type="hidden" name ="initposy_json" id="initposy_json">
         <input type="hidden" name ="initposx_json" id="initposx_json">
+        <input type="hidden" name ="mobs_json" id="mobs_json">
 	Map name :<input type="text" name="map_name" id="map_name"><br>
 	<input type="button" value="Send Map" id="map_send">
     </form>

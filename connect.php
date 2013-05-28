@@ -22,7 +22,7 @@ function add_player() {
   return $conn->lastInsertId();
 }
 
-function add_map($name, $tiles, $initPosX, $initPosY) {
+function add_map($name, $tiles, $initPosX, $initPosY,$mobs) {
   $conn = connect();
   $add_map = $conn->prepare("INSERT INTO map (name,tiles) VALUES (:name, :tiles)");
   $add_map->execute(array("name" => $name, "tiles" => $tiles));
@@ -31,8 +31,17 @@ function add_map($name, $tiles, $initPosX, $initPosY) {
   $get_map_id->execute(array("name" => $name));
   $map_id = $get_map_id->fetch(PDO::FETCH_ASSOC);
   
-echo 'INSERT INTO map_content (map_id, type, startX, startY, attributes) VALUES ('.$map_id['id'].', player, '.$initPosX.', '.$initPosY.', {\"x\":'.$initPosX.',\"y\":'.$initPosY.'})';
+//echo 'INSERT INTO map_content (map_id, type, startX, startY, attributes) VALUES ('.$map_id['id'].', player, '.$initPosX.', '.$initPosY.', {\"x\":'.$initPosX.',\"y\":'.$initPosY.'})';
   $conn->query('INSERT INTO map_content (map_id, type, startX, startY, attributes) VALUES ('.$map_id['id'].', "player", '.$initPosX.', '.$initPosY.', "{\"x\":'.$initPosX.',\"y\":'.$initPosY.'}")');
+
+
+  $json = json_decode($mobs, true);
+  var_dump($json[0]['attributes']);
+  for ($i = 0; $i < count($json); $i++){
+	//echo 'INSERT INTO map_content (map_id, type, attributes) VALUES ('.$map_id['id'].', "'.$json[$i]['type'].', "{\"x\":'.$json[$i]['attributes']['x'].',\"y\":'.$json[$i]['attributes']['x'].'}")';
+	  $conn->query('INSERT INTO map_content (map_id, type, attributes) VALUES ('.$map_id['id'].', "'.$json[$i]['type'].'", "{\"x\":'.$json[$i]['attributes']['x'].',\"y\":'.$json[$i]['attributes']['x'].'}")');
+  }
+
   return $conn->lastInsertId();
 }
 
