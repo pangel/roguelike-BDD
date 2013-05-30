@@ -71,6 +71,7 @@ try {
     <div id="go-home"><a href="index.php">Retour au début</a></div>
     <div id="status">
     </div>
+    <div class="game-over">GAME OVER</div>
   </body>
 </html>
 <?

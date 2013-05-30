@@ -126,12 +126,20 @@ App.modelTemplates = {
     parent: "creature",
     team: 2,
     dmg: 10,
+    die: function() {
+      this.up.die();
+    App.gameOver();
+    },
     initialize: function() {
       this.super();
       this.name = "Joueur";
     },
     act: function(dx,dy) {
-      var enemy = _.find(this.touchingEnemies(), function(e) { return dx === e.get('x')-this.get('x') && dy === e.get('y')-this.get('y') }, this);
+      var collision = function(e) {
+        return dx === e.get('x')-this.get('x') &&
+               dy === e.get('y')-this.get('y');
+      };
+      var enemy = _.find(this.touchingEnemies(), collision, this);
       if (enemy) {
         this.attack(enemy);
       } else {

@@ -49,6 +49,7 @@ App.removeInstance = function(el) {
 };
 
 App.step = function() {
+  if (App.isGameOver) { return; }
   App.map.draw();
   _.each(this.instances, function(instance) {
       if (instance) {
@@ -61,6 +62,16 @@ App.step = function() {
   App.instances = _.compact(App.instances);
   App.drawStatus();
   App.sendGame(App.dump());
+};
+
+App.gameOver = function() {
+  App.isGameOver = true;
+  $('.game-over').addClass('on');
+};
+
+App.wasGameOver = function() {
+  App.isGameOver = true;
+  $('.game-over').addClass('already-on');
 };
 
 // Once a model was built and put into App.models, call new App.models.model_name() to create an instance an initialize it.
@@ -91,6 +102,7 @@ App.buildModel = function(name) {
 
   // Each object can specify its attributes; they will be added to their prototype's attributes
   // (and erase them in case of conflict)
+  template.up = ParentConstructor.prototype;
   template.chain = (ParentConstructor.prototype.chain || []).concat([name]);
   template.attributes = _.extend({}, ParentConstructor.prototype.attributes, template.attributes);
   template.name = name;

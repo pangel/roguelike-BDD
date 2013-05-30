@@ -11,7 +11,7 @@ try {
     <link rel="stylesheet" href="style.css"></link>
     </style>
   </head>
-  <body class="">
+  <body class="index">
 <? 
 
 $games = get_games($player_id);

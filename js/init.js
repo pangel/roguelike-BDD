@@ -21,11 +21,16 @@ $(function() {
     App.initializeInstances(Bootstrap.game.instances);
     App.player = _.find(App.instances, function(el) { return el.type === "player"; });
 
-    _.each(App.instances, function(instance) {
-      instance.draw();
-    });
+    if (!App.player) {
+      App.wasGameOver();
+    } else {
 
-    App.map.draw();
+      _.each(App.instances, function(instance) {
+        instance.draw();
+      });
+
+      App.map.draw();
+    }
 
   }
 });
