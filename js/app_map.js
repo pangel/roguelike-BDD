@@ -79,6 +79,13 @@ App.map.initialize = function(map) {
         zIndex: y + (tile == "w" ? 1 : 0)
       });
 
+
+      if (tile == "w") {
+        t.css('transitionDuration', "" + (0.2 + Math.random() * 1) + "s");
+        t.css('transitionDelay', "" + Math.random() * 0.1 + "s");
+        t.css('transitionTimingFunction', (Math.random() < 0.5 ? "ease-in" : "ease-out"));
+      }
+
       var more = {
         bright: y!=0 && !map[y][x+1],
         bleft: y!=0 && !map[y][x-1]
